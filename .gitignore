@@ -1,0 +1,7 @@
+*.pdb
+*.dll
+Twitter/Twitter.DAL/bin/*
+Twitter/Twitter.DAL/obj/*
+Twitter/Twitter/obj/*
+Twitter/Twitter/bin/*
+*.cache
