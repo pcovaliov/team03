@@ -5,3 +5,7 @@ Twitter/Twitter.DAL/obj/*
 Twitter/Twitter/obj/*
 Twitter/Twitter/bin/*
 *.cache
+Twitter/Twitter.Operations/obj/*
+Twitter/Twitter.Models/obj/*
+Twitter/Twitter.Models/bin/*
+Twitter/Twitter.Operations/bin/*
