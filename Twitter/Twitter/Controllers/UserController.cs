@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Twitter.DAL;
 using Twitter.Models;
 using Twitter.CRUD;
 
@@ -24,7 +25,7 @@ namespace Twitter.Controllers
             if (ModelState.IsValid)
             {
                 UserCRUD AddingUser = new UserCRUD();
-                if (AddingUser.Add(CurrentUser))
+                if (AddingUser.AddUser(CurrentUser))
                 {
                     ViewBag.Message = "Successfully Registration Done.";
                     return RedirectToAction("Login");
@@ -60,7 +61,5 @@ namespace Twitter.Controllers
             }
             return View(CurrentUser);
         }
-
-
     }
 }
