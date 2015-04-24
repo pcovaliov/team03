@@ -1,0 +1,4 @@
+*.pdb
+*.cache
+Twitter/Twitter.DAL/obj/*
+Twitter/Twitter/obj/*
