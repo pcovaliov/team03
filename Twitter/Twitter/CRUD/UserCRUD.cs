@@ -11,7 +11,7 @@ namespace Twitter.CRUD
     {
 
 
-        public bool Add(UserModel UserToAdding)
+        public bool AddUser(UserModel UserToAdding)
         {
             twitterEntities dbContext = new twitterEntities();
             UserConvertor UserConverting = new UserConvertor();
@@ -72,7 +72,21 @@ namespace Twitter.CRUD
             {
                 return false;
             }
+        }
 
+        //TODO Reading USers method
+        public List<UserModel> Read()
+        {
+            twitterEntities dbContext = new twitterEntities();
+            UserConvertor UserConverting = new UserConvertor();
+            var userList = new List<UserModel>();
+
+            foreach (var currentUser in dbContext.Users)
+            {
+                userList.Add(UserConverting.ConvertToModel(currentUser));
+            }
+
+            return userList;
         }
     }
 }
