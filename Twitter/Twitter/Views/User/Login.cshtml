@@ -2,57 +2,53 @@
 @{
  ViewBag.Title = "Login";
 }
- 
-<h2>Login</h2>
- 
-@using (Html.BeginForm("Login", "User", FormMethod.Post))
-{
- @Html.AntiForgeryToken()          
+@using (Html.BeginForm("Login","User",FormMethod.Post))
+{        
  @Html.ValidationSummary(true)
-    if (ViewBag.Message == null)
+   <fieldset>
+       <legend>Login</legend>
+   @Html.AntiForgeryToken()  
+    @if (ViewBag.Message == null)
         {
             <div style="border: solid 1px white">
                <h4> Please complete login form.</h4>
             </div>
         }
-        if (ViewBag.Message == "Successfully Loged.")
+        @if (ViewBag.Message == "Successfully Loged.")
         {
             <div style="border: solid 1px green">
-                ViewBag.Message
+                @ViewBag.Message
             </div>
         }
-        if (ViewBag.Message == "Login Failed.")
+        @if (ViewBag.Message == "Login Failed.")
         {
             <div style="border: solid 1px red">
-                ViewBag.Message
+                @ViewBag.Message
             </div>
         }
- <table>
-  <tr>
-   <td>@Html.LabelFor(a=>a.Email)</td>
-   <td>@Html.TextBoxFor(a=>a.Email)</td>
-   <td>@Html.ValidationMessageFor(a=>a.Email)</td>
-  </tr>
-  <tr>
-   <td>
-    @Html.LabelFor(a=>a.UserPassword)
-   </td>
-   <td>
-    @Html.PasswordFor(a=>a.UserPassword)
-   </td>
-   <td>
-    @Html.ValidationMessageFor(a=>a.UserPassword)
-   </td>
-  </tr>
-  <tr>
-   <td></td>
-   <td>
-    <input type="submit" value="Login" />
-   </td>
-   <td></td>
-  </tr>
- </table>
+
+<div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+        </div>
+          @Html.ValidationMessageFor(model => model.Email)
+ <div class="editor-label">
+            @Html.LabelFor(model => model.UserPassword)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model => model.UserPassword)         
+        </div>
+       @Html.ValidationMessageFor(model => model.UserPassword)
+        <p>
+            <input type="submit" value="Sign In"/>
+        </p>
+</fieldset>
 }
+<div>
+    @Html.ActionLink("Sign Up", "Register")
+</div>
  
 @section Scripts{
  @Scripts.Render("~/bundles/jqueryval")

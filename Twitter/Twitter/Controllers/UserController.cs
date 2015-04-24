@@ -40,27 +40,27 @@ namespace Twitter.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserModel CurrentUser)
         {
-            if (ModelState.IsValid)
-            {
-                UserCRUD loginUser = new UserCRUD();
-                if (loginUser.Login(CurrentUser))
-                {
-                    this.Session["LogedFirstName"] = CurrentUser.FirstName;
-                    ViewBag.Message = "Successfully Loged.";
-                }
-                else
-                {
-                    //return RedirectToAction("Login");
-                    ViewBag.Message = "Login Failed.";
-                }
-            }
-            return View(CurrentUser);
-        }
 
+            UserCRUD loginUser = new UserCRUD();
+            if (loginUser.Login(CurrentUser))
+            {
+                this.Session["LogedFirstName"] = CurrentUser.FirstName;
+                ViewBag.Message = "Successfully Loged.";
+            }
+            else
+            {
+                //return RedirectToAction("Login");
+                ViewBag.Message = "Login Failed.";
+               
+            }
+            return View();
+        }
 
     }
 }
+
