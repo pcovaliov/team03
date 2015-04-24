@@ -72,7 +72,12 @@ namespace Twitter.CRUD
             {
                 return false;
             }
-
         }
+
+        //TODO Reading USers method
+        //public List<UserModel> Read(User UserToReading) 
+        //{ 
+            
+        //}
     }
 }
