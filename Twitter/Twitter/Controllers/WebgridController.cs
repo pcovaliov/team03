@@ -28,12 +28,10 @@ namespace Twitter.Controllers
             List<UserModel> allUsers = new List<UserModel>();
             UserCRUD readingUsers = new UserCRUD();
 
-            foreach (var currentUser in readingUsers.Read())
-            {
-                allUsers.Add(currentUser);
-            }
 
-                totalRecord = allUsers.Count();
+
+            totalRecord = readingUsers.Read().Count();
+            allUsers = readingUsers.Read().OrderBy(a => a.IdUser).Skip(((page - 1) * pageSize)).Take(pageSize).ToList();
                 totalPage = (totalRecord / pageSize) + ((totalRecord % pageSize) > 0 ? 1 : 0);
 
                 ViewBag.TotalRows = totalRecord;
