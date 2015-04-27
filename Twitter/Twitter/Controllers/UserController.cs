@@ -57,14 +57,10 @@ namespace Twitter.Controllers
             {
                 //return RedirectToAction("Login");
                 ViewBag.Message = "Login Failed.";
-               
+
             }
             return View();
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
     }
 }
 
