@@ -131,6 +131,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\WebgridController.cs" />
+    <Compile Include="Convertor\TweetConvertor.cs" />
     <Compile Include="Convertor\UserConvertor.cs" />
     <Compile Include="CRUD\TweetCRUD.cs" />
     <Compile Include="CRUD\UserCRUD.cs" />

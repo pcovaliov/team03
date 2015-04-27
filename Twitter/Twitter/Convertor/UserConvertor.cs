@@ -28,6 +28,7 @@ namespace Twitter.Convertor
             currentUser.Email = ConvertedUser.email;
             currentUser.Avatar = ConvertedUser.avatar;
             currentUser.UserPassword = ConvertedUser.userPassword;
+            currentUser.IdUser = ConvertedUser.id_user;
 
             return currentUser;
         }

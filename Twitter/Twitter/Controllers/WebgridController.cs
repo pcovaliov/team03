@@ -32,13 +32,6 @@ namespace Twitter.Controllers
             {
                 allUsers.Add(currentUser);
             }
-                //using (twitterEntities dbConnection = new twitterEntities())
-                //{
-                //    // here MyDatabaseEntities is our DbContext // 
-                //    totalRecord = dbConnection.Users.Count();
-                //    totalPage = (totalRecord / pageSize) + ((totalRecord % pageSize) > 0 ? 1 : 0);
-                //    allCustomer = dbConnection.Users.OrderBy(a => a.id_user).Skip(((page - 1) * pageSize)).Take(pageSize).ToList();
-                //}
 
                 totalRecord = allUsers.Count();
                 totalPage = (totalRecord / pageSize) + ((totalRecord % pageSize) > 0 ? 1 : 0);

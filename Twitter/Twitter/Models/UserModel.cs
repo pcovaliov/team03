@@ -7,6 +7,8 @@ namespace Twitter.Models
 {
     public class UserModel
     {
+        public int IdUser { get; set; }
+
         [Required(ErrorMessage = "Please type first name", AllowEmptyStrings = false)]
         public string FirstName { get; set; }
 
