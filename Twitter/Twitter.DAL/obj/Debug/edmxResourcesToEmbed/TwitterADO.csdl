@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="twitterModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="twitterEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Follows" EntityType="twitterModel.Follow" />
+    <EntitySet Name="Tweets" EntityType="twitterModel.Tweet" />
+    <EntitySet Name="Users" EntityType="twitterModel.User" />
+  </EntityContainer>
+  <EntityType Name="Follow">
+    <Key>
+      <PropertyRef Name="id_follow" />
+    </Key>
+    <Property Name="id_follow" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="id_subscriber" Type="Int32" Nullable="false" />
+    <Property Name="id_followed_user" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tweet">
+    <Key>
+      <PropertyRef Name="id_tweet" />
+    </Key>
+    <Property Name="id_tweet" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="descripton" Type="String" MaxLength="140" Unicode="false" FixedLength="false" />
+    <Property Name="id_user" Type="Int32" Nullable="false" />
+    <Property Name="created_on" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="last_name" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="avatar" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="userPassword" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

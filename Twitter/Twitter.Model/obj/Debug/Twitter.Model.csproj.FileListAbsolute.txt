@@ -1,0 +1,4 @@
+D:\ASP.Net\Twitter\Twitter.Model\bin\Debug\Twitter.Model.dll
+D:\ASP.Net\Twitter\Twitter.Model\bin\Debug\Twitter.Model.pdb
+D:\ASP.Net\Twitter\Twitter.Model\obj\Debug\Twitter.Model.dll
+D:\ASP.Net\Twitter\Twitter.Model\obj\Debug\Twitter.Model.pdb
