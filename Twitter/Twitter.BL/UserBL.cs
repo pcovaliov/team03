@@ -10,7 +10,7 @@ using Twitter.CRUD.CRUD;
 
 namespace Twitter.BL
 {
-  public class Logic
+  public class UserBL
     {
       public bool Register(UserModel CurrentUser) 
       {

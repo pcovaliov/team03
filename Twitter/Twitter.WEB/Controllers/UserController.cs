@@ -25,7 +25,7 @@ namespace Twitter.WEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                Logic newUser = new Logic();
+                UserBL newUser = new UserBL();
                 if (newUser.Register(CurrentUser))
                 {
                     ViewBag.Message = "Successfully Registration Done.";
@@ -48,11 +48,12 @@ namespace Twitter.WEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserModel CurrentUser)
         {
-               Logic loginUser = new Logic();
+               UserBL loginUser = new UserBL();
                int userLogedId = loginUser.Login(CurrentUser);
                 if (userLogedId > 0)
                 {
-                    this.Session["LogedId"] = userLogedId;
+                    this.Session["LogedId"] = userLogedId.ToString();
+                    this.Session["LogedName"] = CurrentUser.Email.ToString();
                     return RedirectToAction("DisplayUsers");
                 }
                 else
@@ -69,7 +70,7 @@ namespace Twitter.WEB.Controllers
             int totalRecord = 0;
 
             List<UserModel> allUsers = new List<UserModel>();
-            Logic users = new Logic();
+            UserBL users = new UserBL();
 
             totalRecord = users.SelectUsers().Count();
             allUsers = users.SelectUsers().OrderBy(a => a.IdUser).Skip(((page - 1) * pageSize)).Take(pageSize).ToList();

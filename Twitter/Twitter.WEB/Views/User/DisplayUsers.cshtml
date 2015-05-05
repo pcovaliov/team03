@@ -34,9 +34,11 @@
                 }
             </style>
  
-            <h2>Display Users</h2>
+            <h2 align = "center">Display Users</h2>
+           Hello, @Session["LogedName"].ToString();
+            IDUser @Session["LogedId"].ToString();
  
-                <div>
+                <div align = "center">
                     @grid.GetHtml(tableStyle:"gridtable",
                     columns: grid.Columns(
                                 grid.Column("FirstName","First Name"),
