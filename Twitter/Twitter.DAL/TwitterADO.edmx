@@ -4,11 +4,19 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="twitterModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="twitterModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="twitterModelStoreContainer">
           <EntitySet Name="Follows" EntityType="twitterModel.Store.Follows" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Tweets" EntityType="twitterModel.Store.Tweets" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Users" EntityType="twitterModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FKFollowedUser" Association="twitterModel.Store.FKFollowedUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Follows" EntitySet="Follows" />
+          </AssociationSet>
+          <AssociationSet Name="FKSubscriber" Association="twitterModel.Store.FKSubscriber">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Follows" EntitySet="Follows" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Follows">
           <Key>
@@ -24,8 +32,8 @@
           </Key>
           <Property Name="id_tweet" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="descripton" Type="varchar" MaxLength="140" />
-          <Property Name="id_user" Type="int" Nullable="false" />
-          <Property Name="created_on" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="created_on" Type="varchar" MaxLength="30" />
+          <Property Name="id_user" Type="int" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -38,8 +46,31 @@
           <Property Name="avatar" Type="varchar(max)" />
           <Property Name="userPassword" Type="varchar" MaxLength="35" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+        <Association Name="FKFollowedUser">
+          <End Role="Users" Type="twitterModel.Store.Users" Multiplicity="1" />
+          <End Role="Follows" Type="twitterModel.Store.Follows" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="id_user" />
+            </Principal>
+            <Dependent Role="Follows">
+              <PropertyRef Name="id_followed_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSubscriber">
+          <End Role="Users" Type="twitterModel.Store.Users" Multiplicity="1" />
+          <End Role="Follows" Type="twitterModel.Store.Follows" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="id_user" />
+            </Principal>
+            <Dependent Role="Follows">
+              <PropertyRef Name="id_subscriber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="twitterModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -47,6 +78,14 @@
           <EntitySet Name="Follows" EntityType="twitterModel.Follow" />
           <EntitySet Name="Tweets" EntityType="twitterModel.Tweet" />
           <EntitySet Name="Users" EntityType="twitterModel.User" />
+          <AssociationSet Name="FKFollowedUser" Association="twitterModel.FKFollowedUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Follows" EntitySet="Follows" />
+          </AssociationSet>
+          <AssociationSet Name="FKSubscriber" Association="twitterModel.FKSubscriber">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Follows" EntitySet="Follows" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Follow">
           <Key>
@@ -55,6 +94,8 @@
           <Property Name="id_follow" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="id_subscriber" Type="Int32" Nullable="false" />
           <Property Name="id_followed_user" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="twitterModel.FKFollowedUser" FromRole="Follows" ToRole="Users" />
+          <NavigationProperty Name="User1" Relationship="twitterModel.FKSubscriber" FromRole="Follows" ToRole="Users" />
         </EntityType>
         <EntityType Name="Tweet">
           <Key>
@@ -62,8 +103,8 @@
           </Key>
           <Property Name="id_tweet" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="descripton" Type="String" MaxLength="140" Unicode="false" FixedLength="false" />
-          <Property Name="id_user" Type="Int32" Nullable="false" />
-          <Property Name="created_on" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <Property Name="id_user" Type="Int32" />
+          <Property Name="created_on" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -75,7 +116,33 @@
           <Property Name="email" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="avatar" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
           <Property Name="userPassword" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Follows" Relationship="twitterModel.FKFollowedUser" FromRole="Users" ToRole="Follows" />
+          <NavigationProperty Name="Follows1" Relationship="twitterModel.FKSubscriber" FromRole="Users" ToRole="Follows" />
         </EntityType>
+        <Association Name="FKFollowedUser">
+          <End Role="Users" Type="twitterModel.User" Multiplicity="1" />
+          <End Role="Follows" Type="twitterModel.Follow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="id_user" />
+            </Principal>
+            <Dependent Role="Follows">
+              <PropertyRef Name="id_followed_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKSubscriber">
+          <End Role="Users" Type="twitterModel.User" Multiplicity="1" />
+          <End Role="Follows" Type="twitterModel.Follow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="id_user" />
+            </Principal>
+            <Dependent Role="Follows">
+              <PropertyRef Name="id_subscriber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

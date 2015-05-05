@@ -17,5 +17,8 @@ namespace Twitter.DAL
         public int id_follow { get; set; }
         public int id_subscriber { get; set; }
         public int id_followed_user { get; set; }
+    
+        public virtual User User { get; set; }
+        public virtual User User1 { get; set; }
     }
 }

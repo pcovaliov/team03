@@ -56,7 +56,7 @@
       <Name>Twitter.CRUD</Name>
     </ProjectReference>
     <ProjectReference Include="..\Twitter.DAL\Twitter.DAL.csproj">
-      <Project>{b54e79cc-ee7c-4900-afc6-5bb9caad88a2}</Project>
+      <Project>{23a5d685-3abe-4b29-b786-609b692b77f8}</Project>
       <Name>Twitter.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Twitter.Model\Twitter.Model.csproj">

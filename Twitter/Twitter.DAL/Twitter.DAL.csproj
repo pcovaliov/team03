@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B54E79CC-EE7C-4900-AFC6-5BB9CAAD88A2}</ProjectGuid>
+    <ProjectGuid>{23A5D685-3ABE-4B29-B786-609B692B77F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Twitter.DAL</RootNamespace>
@@ -60,6 +60,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TwitterADO.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterADO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TwitterADO.tt</DependentUpon>
     </Compile>
     <Compile Include="TwitterADO.Designer.cs">
       <AutoGen>True</AutoGen>

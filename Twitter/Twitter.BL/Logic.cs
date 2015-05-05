@@ -7,6 +7,7 @@ using Twitter.Model;
 using Twitter.DAL;
 using Twitter.CRUD.Convertor;
 using Twitter.CRUD.CRUD;
+using Twitter.CRUD;
 
 namespace Twitter.BL
 {
@@ -51,5 +52,19 @@ namespace Twitter.BL
 
             return readingUsers.Read();
         }
+
+        public bool Message(TweetModel CurrentTweet)
+        {
+            TweetCRUD AddingTweet = new TweetCRUD();
+            if (AddingTweet.AddTweet(CurrentTweet))
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
+      
     }
 }
