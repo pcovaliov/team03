@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="twitterModelStoreContainer" CdmEntityContainer="twitterEntities">
+    <EntitySetMapping Name="Follows">
+      <EntityTypeMapping TypeName="twitterModel.Follow">
+        <MappingFragment StoreEntitySet="Follows">
+          <ScalarProperty Name="id_follow" ColumnName="id_follow" />
+          <ScalarProperty Name="id_subscriber" ColumnName="id_subscriber" />
+          <ScalarProperty Name="id_followed_user" ColumnName="id_followed_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tweets">
+      <EntityTypeMapping TypeName="twitterModel.Tweet">
+        <MappingFragment StoreEntitySet="Tweets">
+          <ScalarProperty Name="id_tweet" ColumnName="id_tweet" />
+          <ScalarProperty Name="descripton" ColumnName="descripton" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="twitterModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

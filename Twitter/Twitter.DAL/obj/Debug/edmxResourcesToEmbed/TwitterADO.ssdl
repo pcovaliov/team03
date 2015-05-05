@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="twitterModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="twitterModelStoreContainer">
+    <EntitySet Name="Follows" EntityType="twitterModel.Store.Follows" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tweets" EntityType="twitterModel.Store.Tweets" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="twitterModel.Store.Users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Follows">
+    <Key>
+      <PropertyRef Name="id_follow" />
+    </Key>
+    <Property Name="id_follow" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_subscriber" Type="int" Nullable="false" />
+    <Property Name="id_followed_user" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tweets">
+    <Key>
+      <PropertyRef Name="id_tweet" />
+    </Key>
+    <Property Name="id_tweet" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="descripton" Type="varchar" MaxLength="140" />
+    <Property Name="id_user" Type="int" Nullable="false" />
+    <Property Name="created_on" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id_user" />
+    </Key>
+    <Property Name="id_user" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="varchar" MaxLength="20" />
+    <Property Name="last_name" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="avatar" Type="varchar(max)" />
+    <Property Name="userPassword" Type="varchar" MaxLength="35" />
+  </EntityType>
+</Schema>
