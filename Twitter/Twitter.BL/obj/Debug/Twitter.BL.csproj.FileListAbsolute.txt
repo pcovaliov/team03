@@ -1,0 +1,32 @@
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\Twitter.BL.dll
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\Twitter.BL.pdb
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\Twitter.CRUD.dll
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\Twitter.CRUD.pdb
+D:\ASP.Net\Twitter\Twitter.BL\obj\Debug\Twitter.BL.csprojResolveAssemblyReference.cache
+D:\ASP.Net\Twitter\Twitter.BL\obj\Debug\Twitter.BL.dll
+D:\ASP.Net\Twitter\Twitter.BL\obj\Debug\Twitter.BL.pdb
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\Twitter.DAL.dll
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\Twitter.Model.dll
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\EntityFramework.dll
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\Twitter.DAL.pdb
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\Twitter.Model.pdb
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\EntityFramework.xml
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\Twitter.BL.dll.config
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.Net\Twitter\Twitter.BL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\Twitter.BL.dll.config
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\Twitter.BL.dll
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\Twitter.BL.pdb
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\EntityFramework.dll
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\Twitter.CRUD.dll
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\Twitter.DAL.dll
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\Twitter.Model.dll
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\Twitter.DAL.pdb
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\Twitter.Model.pdb
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\EntityFramework.xml
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project for Internship\team03\Twitter\Twitter.BL\obj\Debug\Twitter.BL.csprojResolveAssemblyReference.cache
+D:\Project for Internship\team03\Twitter\Twitter.BL\obj\Debug\Twitter.BL.dll
+D:\Project for Internship\team03\Twitter\Twitter.BL\obj\Debug\Twitter.BL.pdb
+D:\Project for Internship\team03\Twitter\Twitter.BL\bin\Debug\Twitter.CRUD.pdb

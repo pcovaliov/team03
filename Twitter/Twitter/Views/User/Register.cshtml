@@ -1,0 +1,91 @@
+﻿@model Twitter.Models.UserModel
+
+@{
+    ViewBag.Title = "Register";
+}
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+   
+    <fieldset>
+        <legend>Register</legend>
+        @Html.AntiForgeryToken()
+        @if (ViewBag.Message == null)
+        {
+            <div style="border: solid 1px white">
+               <h4> Please complete register form.</h4>
+            </div>
+        }
+        @if (ViewBag.Message == "Successfully Registration Done.")
+        {
+            <div style="border: solid 1px green">
+                @ViewBag.Message
+            </div>
+        }
+        @if (ViewBag.Message == "Registration Failed, this mail is already used.")
+        {
+            <div style="border: solid 1px red">
+                @ViewBag.Message
+            </div>
+        }
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)           
+        </div>
+         @Html.ValidationMessageFor(model => model.FirstName)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)     
+        </div>
+            @Html.ValidationMessageFor(model => model.LastName)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+        </div>
+         @Html.ValidationMessageFor(model => model.Email)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Avatar)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Avatar)
+        </div>
+        @Html.ValidationMessageFor(model => model.Avatar)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserPassword)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model => model.UserPassword)
+        </div>
+        @Html.ValidationMessageFor(model => model.UserPassword)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ConfirmPassword)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model => model.ConfirmPassword)
+        </div>
+          @Html.ValidationMessageFor(model => model.ConfirmPassword)
+
+        <p>
+            <input type="submit" value="Sign Up" />
+        </p>
+    </fieldset>
+    
+}
+
+<div>
+    @Html.ActionLink("Sign In", "Login")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
