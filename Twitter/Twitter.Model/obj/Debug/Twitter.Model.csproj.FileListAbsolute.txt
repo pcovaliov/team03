@@ -12,3 +12,13 @@ D:\Project for Internship\team03\Twitter\Twitter.Model\bin\Debug\EntityFramework
 D:\Project for Internship\team03\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.dll
 D:\Project for Internship\team03\Twitter\Twitter.Model\bin\Debug\EntityFramework.xml
 D:\Project for Internship\team03\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\Twitter.Model.dll.config
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\Twitter.Model.dll
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\Twitter.Model.pdb
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.dll
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.xml
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\obj\Debug\Twitter.Model.csprojResolveAssemblyReference.cache
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\obj\Debug\Twitter.Model.dll
+C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\obj\Debug\Twitter.Model.pdb

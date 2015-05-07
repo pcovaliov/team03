@@ -52,19 +52,8 @@ namespace Twitter.BL
 
             return readingUsers.Read();
         }
-
-        public bool Message(TweetModel CurrentTweet)
-        {
-            TweetCRUD AddingTweet = new TweetCRUD();
-            if (AddingTweet.AddTweet(CurrentTweet))
-            {
-                return true;
-            }
-            else 
-            {
-                return false;
-            }
-        }
+     
+        
       
     }
 }

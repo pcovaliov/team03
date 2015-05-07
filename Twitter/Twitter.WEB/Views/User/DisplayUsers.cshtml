@@ -1,61 +1,49 @@
-﻿@model List<Twitter.Model.UserModel>
- 
-            @{
-                ViewBag.Title = "Display Users";
-                // Here for used webgrid we have to add Helper dll as we used Basic MVC templete its by default not exist
+﻿@model PagedList.IPagedList<Twitter.Model.UserModel>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
-                var grid = new WebGrid(rowsPerPage: ViewBag.PageSize, canPage: true);
-                grid.Bind(source: Model, rowCount: ViewBag.TotalRows, autoSortAndPage: false);
-            }
- 
-            @* Here I will add some style for grid *@
-            <style type="text/css">
-                table.gridtable {
-                 font-family: verdana,arial,sans-serif;
-                 font-size:11px;
-                 color:#333333;
-                 border-width: 1px;
-                 border-color: #666666;
-                 border-collapse: collapse;
-                }
-                table.gridtable th {
-                 border-width: 1px;
-                 padding: 8px;
-                 border-style: solid;
-                 border-color: #666666;
-                 background-color: #dedede;
-                }
-                table.gridtable td {
-                 border-width: 1px;
-                 padding: 8px;
-                 border-style: solid;
-                 border-color: #666666;
-                 background-color: #ffffff;
-                }
-            </style>
- 
-            <h2 align = "center">Display Users</h2>
-            <div align ="center">
-           Hello, @Session["LogedName"].ToString();
-            IDUser @Session["LogedId"].ToString();
-                <br/>
-                <br/>
-                </div>
- 
-                <div align = "center">
-                    @grid.GetHtml(tableStyle:"gridtable",
-                    columns: grid.Columns(
-                                grid.Column("FirstName","First Name"),
-                                grid.Column("LastName","Last Name"),
-                                grid.Column("Email","Email"),
-                                grid.Column("Avatar","Avatar"),
-                                grid.Column(header: "Action", format: (item) => Html.ActionLink("Delete", "Login"))
-                            )
-                        )      
-                </div>
+@{
+    ViewBag.Title = "DisplayUsers";
+}
 
-<div align ="center">
-    @Html.ActionLink("Tweets", "Message", "Tweet")
-</div>
+<h2>DisplayUsers</h2>
 
 
+<table>
+    <tr>      
+        <th>
+            First Name
+        </th>
+        <th>
+           Last name
+        </th>
+        <th>
+            Email
+        </th>      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+               
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) 
+from @Model.PageCount
+ 
+@Html.PagedListPager(Model, page => Url.Action("DisplayUsers",  new { page }))
