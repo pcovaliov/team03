@@ -5,8 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using Twitter.BL;
 using Twitter.Model;
-using PagedList;
-using PagedList.Mvc;
 using Twitter.CRUD.CRUD;
 
 namespace Twitter.WEB.Controllers
@@ -31,7 +29,7 @@ namespace Twitter.WEB.Controllers
                 if (newUser.Register(CurrentUser))
                 {
                     ViewBag.Message = "Successfully Registration Done.";
-                    return RedirectToAction("Login");
+                    //return RedirectToAction("Login");
                 }
                 else
                 {
@@ -65,14 +63,23 @@ namespace Twitter.WEB.Controllers
             return View();
         }
 
-        public ActionResult DisplayUsers(int? page = 1)
+        public ActionResult DisplayUsers(int page = 1)
         {
             int pageSize = 10;
-            int pageNumber = (page ?? 1);
+            int totalPage = 0;
+            int totalRecord = 0;
+
             List<UserModel> allUsers = new List<UserModel>();
             UserBL users = new UserBL();
-            allUsers = users.SelectUsers().OrderBy(currentUser => currentUser.IdUser).ToList();
-            return View("DisplayUsers", allUsers.ToPagedList(pageNumber, pageSize));
+
+            totalRecord = users.SelectUsers().Count();
+            allUsers = users.SelectUsers().OrderBy(a => a.IdUser).Skip(((page - 1) * pageSize)).Take(pageSize).ToList();
+            totalPage = (totalRecord / pageSize) + ((totalRecord % pageSize) > 0 ? 1 : 0);
+
+            ViewBag.TotalRows = totalRecord;
+            ViewBag.PageSize = pageSize;
+
+            return View(allUsers);
         }
 
     }

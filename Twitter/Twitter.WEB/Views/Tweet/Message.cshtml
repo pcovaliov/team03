@@ -22,22 +22,15 @@
             @Html.ValidationMessageFor(model => model.Descripton)
         </div>       
         <p>
-            <input type="submit" value="Create" onClick =/>
-        </p>        
+            <input type="submit" value="Create" />
+        </p>
     </fieldset>
 }
- <div>
-        <td width="400px">
-            <h2>Your tweets</h2>
-        @{Html.RenderAction("DisplayTweets", "Tweet");}
-            </td>
-            </div>
 
 <div>
-    @Html.ActionLink("Back", "DisplayUsers", "User")
+    @Html.ActionLink("Back", "Message")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-

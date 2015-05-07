@@ -146,28 +146,54 @@ namespace Twitter.Test
             bool control = testCRUD.AddUser(myUser);
 
             //assert
+            Assert.AreEqual(false, control);
+        }
+
+        [TestMethod]
+        public void TryToDeleteExistingUser_ShouldBeReturnBoolValueTrue()
+        {
+            //arrange
+            var myUser = new UserModel()
+            {
+                FirstName = "NewName",
+                LastName = "NewLastName",
+                Email = "NewMail@gmail.com",
+                Avatar = "1.jpg",
+                UserPassword = "endavatest",
+                ConfirmPassword = "endavatest"
+
+            };
+            var testCRUD = new UserCRUD();
+
+            //act
+            bool control = testCRUD.Delete(myUser);
+
+            //assert
             Assert.AreEqual(true, control);
         }
 
-        //[TestMethod]
-        //public void TryToInsertUserEntity_ShouldBeReturnBoolValueFalse()
-        //{
-        //    //arrange
-        //    var myUser = new User()
-        //    {
-        //        first_name = "Scutari",
-        //        last_name = "Mihai",
-        //        email = "scutari.mihai@gmail.com",
-        //        avatar = "1.jpg",
-        //        userPassword = "endavatest",
-        //    };
-        //    var testCRUD = new UserCRUD();
+        [TestMethod]
+        public void TryToDeleteNonExistingUser_ShouldBeReturnBoolValueFalse()
+        {
+            //arrange
+            var myUser = new UserModel()
+            {
+                FirstName = "NewName",
+                LastName = "NewLastName",
+                Email = "NewMail@gmail.com",
+                Avatar = "1.jpg",
+                UserPassword = "endavatest",
+                ConfirmPassword = "endavatest"
 
-        //    //act
-        //    bool control = testCRUD.AddUser(myUser);
-        //    //assert
-        //    Assert.AreEqual(false, control);
-        //}
+            };
+            var testCRUD = new UserCRUD();
+
+            //act
+            bool control = testCRUD.Delete(myUser);
+
+            //assert
+            Assert.AreEqual(false, control);
+        }
 
         [TestMethod]
         public void TryToReadAllUsers_ShouldBeReturnUserModelList()

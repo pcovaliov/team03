@@ -6,8 +6,6 @@ using System.Web.Mvc;
 using Twitter.BL;
 using Twitter.Model;
 using Twitter.CRUD.CRUD;
-using PagedList;
-using PagedList.Mvc;
 namespace Twitter.WEB.Controllers
 {
     public class TweetController : Controller
@@ -25,31 +23,18 @@ namespace Twitter.WEB.Controllers
         public ActionResult Message(TweetModel CurrentTweet)
         {
 
-            TweetBL NewMessage = new TweetBL();
+            UserBL NewMessage = new UserBL();
             if (NewMessage.Message(CurrentTweet))
             {
                 ViewBag.Message = "Your message  was added successfuly";
+                //return RedirectToAction("Message");
             }
             else
             {
                 ViewBag.Message = "Failed to add message";
             }
-                     
             return View();
         }
-
-        public ActionResult DisplayTweets(int? page = 1)
-        {
-            int pageSize = 25;
-            int pageNumber = (page ?? 1);
-            List<TweetModel> allTweets = new List<TweetModel>();
-            TweetBL tweets = new TweetBL();
-            allTweets = tweets.SelectTweets().OrderByDescending(currentTweet => currentTweet.CreatedOn).ToList();         
-            return PartialView("_DisplayTweets", allTweets.ToPagedList(pageNumber, pageSize));
-        }
-
-
-        
 
     }
 }

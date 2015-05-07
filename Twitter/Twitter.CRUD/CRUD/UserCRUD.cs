@@ -32,6 +32,7 @@ namespace Twitter.CRUD.CRUD
                 return false;
             }
         }
+
         public bool Delete(UserModel UserToDeleting)
         {
             twitterEntities dbContext = new twitterEntities();
@@ -44,7 +45,7 @@ namespace Twitter.CRUD.CRUD
                        FirstOrDefault();
             if (userList != null)
             {
-                dbContext.Users.Remove(deleteUser);
+                dbContext.Users.Remove(userList);
                 dbContext.SaveChanges();
                 return true;
             }

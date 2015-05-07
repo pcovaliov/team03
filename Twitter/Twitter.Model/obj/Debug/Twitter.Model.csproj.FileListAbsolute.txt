@@ -12,13 +12,22 @@ D:\Project for Internship\team03\Twitter\Twitter.Model\bin\Debug\EntityFramework
 D:\Project for Internship\team03\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.dll
 D:\Project for Internship\team03\Twitter\Twitter.Model\bin\Debug\EntityFramework.xml
 D:\Project for Internship\team03\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\Twitter.Model.dll.config
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\Twitter.Model.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\Twitter.Model.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\obj\Debug\Twitter.Model.csprojResolveAssemblyReference.cache
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\obj\Debug\Twitter.Model.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Model\obj\Debug\Twitter.Model.pdb
+D:\Work for Twitter\Twitter\Twitter.Model\bin\Debug\Twitter.Model.dll.config
+D:\Work for Twitter\Twitter\Twitter.Model\bin\Debug\Twitter.Model.dll
+D:\Work for Twitter\Twitter\Twitter.Model\bin\Debug\Twitter.Model.pdb
+D:\Work for Twitter\Twitter\Twitter.Model\bin\Debug\EntityFramework.dll
+D:\Work for Twitter\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work for Twitter\Twitter\Twitter.Model\bin\Debug\EntityFramework.xml
+D:\Work for Twitter\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work for Twitter\Twitter\Twitter.Model\obj\Debug\Twitter.Model.csprojResolveAssemblyReference.cache
+D:\Work for Twitter\Twitter\Twitter.Model\obj\Debug\Twitter.Model.dll
+D:\Work for Twitter\Twitter\Twitter.Model\obj\Debug\Twitter.Model.pdb
+C:\Users\rbugaci\Desktop\Twitter\Twitter.Model\bin\Debug\Twitter.Model.dll.config
+C:\Users\rbugaci\Desktop\Twitter\Twitter.Model\bin\Debug\Twitter.Model.dll
+C:\Users\rbugaci\Desktop\Twitter\Twitter.Model\bin\Debug\Twitter.Model.pdb
+C:\Users\rbugaci\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.dll
+C:\Users\rbugaci\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rbugaci\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.xml
+C:\Users\rbugaci\Desktop\Twitter\Twitter.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rbugaci\Desktop\Twitter\Twitter.Model\obj\Debug\Twitter.Model.dll
+C:\Users\rbugaci\Desktop\Twitter\Twitter.Model\obj\Debug\Twitter.Model.pdb
