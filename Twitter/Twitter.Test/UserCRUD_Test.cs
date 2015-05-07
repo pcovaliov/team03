@@ -12,11 +12,57 @@ namespace Twitter.Test
     [TestClass]
     public class UserCRUD_Test
     {
+        #region Private
+        UserModel myUserModel;
+        User myUser;
+        UserModel newUserModel;
+        UserModel nonExistUser;
+        UserConvertor testConvertor;
+        UserCRUD testCRUD;
+        #endregion
+
         public UserCRUD_Test()
         {
-            //
-            // TODO: Add constructor logic here
-            //
+            myUserModel = new UserModel()
+            {
+                FirstName = "Scutari",
+                LastName = "Mihai",
+                Email = "scutari.mihai@gmail.com",
+                Avatar = "1.jpg",
+                UserPassword = "endavatest",
+                ConfirmPassword = "endavatest"
+
+            };
+            testConvertor = new UserConvertor();
+            newUserModel = new UserModel()
+            {
+                FirstName = "NewName",
+                LastName = "NewLastname",
+                Email = "NewMail@gmail.com",
+                Avatar = "1.jpg",
+                UserPassword = "endavatest",
+                ConfirmPassword = "endavatest"
+
+            };
+            testCRUD = new UserCRUD();
+            nonExistUser =  new UserModel()
+            {
+                FirstName = "NonExist",
+                LastName = "NonExist",
+                Email = "NonExistMail@gmail.com",
+                Avatar = "1.jpg",
+                UserPassword = "endavatest",
+                ConfirmPassword = "endavatest"
+
+            };
+            myUser = new User()
+            {
+                first_name = "Scutari",
+                last_name = "Mihai",
+                email= "scutari.mihai@gmail.com",
+                avatar = "1.jpg",
+                userPassword = "endavatest",
+            };
         }
 
         private TestContext testContextInstance;
@@ -63,20 +109,9 @@ namespace Twitter.Test
         public void TryToConvertUserModelIntoUser_ShouldBeReturnUserType()
         {
             //arrange
-            var myUser = new UserModel()
-            {
-                FirstName = "Scutari",
-                LastName = "Mihai",
-                Email = "scutari.mihai@gmail.com",
-                Avatar = "1.jpg",
-                UserPassword = "endavatest",
-                ConfirmPassword = "endavatest"
-
-            };
-            var testCRUD = new UserConvertor();
 
             //act
-            User currentUser = testCRUD.ConvertToDAL(myUser);
+            User currentUser = testConvertor.ConvertToDAL(myUserModel);
 
             //assert
             Assert.AreEqual("Twitter.DAL.User", currentUser.GetType().ToString());
@@ -86,18 +121,9 @@ namespace Twitter.Test
         public void TryToConvertUserIntoUserModel_ShouldBeReturnUserModelType()
         {
             //arrange
-            var myUser = new User()
-            {
-                first_name = "Scutari",
-                last_name = "Mihai",
-                email = "scutari.mihai@gmail.com",
-                avatar = "1.jpg",
-                userPassword = "endavatest"
-            };
-            var testCRUD = new UserConvertor();
 
             //act
-            UserModel currentUser = testCRUD.ConvertToModel(myUser);
+            UserModel currentUser = testConvertor.ConvertToModel(myUser);
 
             //assert
             Assert.AreEqual("Twitter.Model.UserModel", currentUser.GetType().ToString());
@@ -107,20 +133,10 @@ namespace Twitter.Test
         public void TryToInsertExistingUser_ShouldBeReturnBoolValueFalse()
         {
             //arrange
-            var myUser = new UserModel()
-            {
-                FirstName = "Scutari",
-                LastName = "Mihai",
-                Email = "scutari.mihai@gmail.com",
-                Avatar = "1.jpg",
-                UserPassword = "endavatest",
-                ConfirmPassword = "endavatest"
-
-            };
             var testCRUD = new UserCRUD();
 
             //act
-            bool control = testCRUD.AddUser(myUser);
+            bool control = testCRUD.AddUser(myUserModel);
 
             //assert
             Assert.AreEqual(false, control);
@@ -130,20 +146,9 @@ namespace Twitter.Test
         public void TryToInsertNewUser_ShouldBeReturnBoolValueTrue()
         {
             //arrange
-            var myUser = new UserModel()
-            {
-                FirstName = "NewName",
-                LastName = "NewLastname",
-                Email = "NewMail@gmail.com",
-                Avatar = "1.jpg",
-                UserPassword = "endavatest",
-                ConfirmPassword = "endavatest"
-
-            };
-            var testCRUD = new UserCRUD();
 
             //act
-            bool control = testCRUD.AddUser(myUser);
+            bool control = testCRUD.AddUser(newUserModel);
 
             //assert
             Assert.AreEqual(false, control);
@@ -153,20 +158,9 @@ namespace Twitter.Test
         public void TryToDeleteExistingUser_ShouldBeReturnBoolValueTrue()
         {
             //arrange
-            var myUser = new UserModel()
-            {
-                FirstName = "NewName",
-                LastName = "NewLastName",
-                Email = "NewMail@gmail.com",
-                Avatar = "1.jpg",
-                UserPassword = "endavatest",
-                ConfirmPassword = "endavatest"
-
-            };
-            var testCRUD = new UserCRUD();
 
             //act
-            bool control = testCRUD.Delete(myUser);
+            bool control = testCRUD.Delete(myUserModel);
 
             //assert
             Assert.AreEqual(true, control);
@@ -176,20 +170,9 @@ namespace Twitter.Test
         public void TryToDeleteNonExistingUser_ShouldBeReturnBoolValueFalse()
         {
             //arrange
-            var myUser = new UserModel()
-            {
-                FirstName = "NewName",
-                LastName = "NewLastName",
-                Email = "NewMail@gmail.com",
-                Avatar = "1.jpg",
-                UserPassword = "endavatest",
-                ConfirmPassword = "endavatest"
-
-            };
-            var testCRUD = new UserCRUD();
 
             //act
-            bool control = testCRUD.Delete(myUser);
+            bool control = testCRUD.Delete(nonExistUser);
 
             //assert
             Assert.AreEqual(false, control);
@@ -199,7 +182,6 @@ namespace Twitter.Test
         public void TryToReadAllUsers_ShouldBeReturnUserModelList()
         {
             //arrange
-            var testCRUD = new UserCRUD();
 
             //act
             var expectedType = testCRUD.Read();

@@ -16,11 +16,44 @@ namespace Twitter.Test
     [TestClass]
     public class TweetCRUD_Test
     {
+        #region Private
+        TweetCRUD testCRUD;
+        TweetConvertor testConvertor;
+        TweetModel nonExistTweet;
+        TweetModel myTweetModel;
+        TweetModel existingTweet;
+        Tweet myTweet;
+        #endregion
+
         public TweetCRUD_Test()
         {
-            //
-            // TODO: Add constructor logic here
-            //
+            testCRUD = new TweetCRUD();
+            testConvertor = new TweetConvertor();
+            nonExistTweet = new TweetModel()
+            {
+                Descripton = "vasea roma jenea",
+                IdTweet = 10,
+                IdUser = -3,
+                CreatedOn = "2015-05-07 10:18:47"
+            };
+            myTweetModel = new TweetModel()
+            {
+                Descripton = "test tweet",
+            };
+            myTweet = new Tweet()
+            {
+                descripton = "test tweet",
+                created_on = DateTime.Now.ToString(),
+                id_tweet = 20,
+                id_user = 19
+            };
+            existingTweet = new TweetModel()
+            {
+                Descripton = "fsgsdgasdfasdf9348759646547568",
+                IdTweet = 10,
+                IdUser = 1,
+                CreatedOn = "2015-05-07 10:18:47"
+            };
         }
 
         private TestContext testContextInstance;
@@ -67,14 +100,9 @@ namespace Twitter.Test
         public void TryToConvertTweetModelIntoTweet_ShouldBeReturnTweetType()
         {
             //arrange
-            var myTweet = new TweetModel()
-            {
-                Descripton = "test tweet",
-            };
-            var testCRUD = new TweetConvertor();
 
             //act
-            var currentTweet = testCRUD.ConvertTweetToDAL(myTweet);
+            var currentTweet = testConvertor.ConvertTweetToDAL(myTweetModel);
 
             //assert
             Assert.AreEqual("Twitter.DAL.Tweet", currentTweet.GetType().ToString());
@@ -84,17 +112,9 @@ namespace Twitter.Test
         public void TryToConvertTweetIntoTweetModel_ShouldBeReturnTweetModelType()
         {
             //arrange
-            var myTweet = new Tweet()
-            {
-                descripton = "test tweet",
-                created_on = DateTime.Now.ToString(),
-                id_tweet = 20,
-                id_user = 19
-            };
-            var testCRUD = new TweetConvertor();
 
             //act
-            var currentTweet = testCRUD.ConvertTweetToModel(myTweet);
+            var currentTweet = testConvertor.ConvertTweetToModel(myTweet);
 
             //assert
             Assert.AreEqual("Twitter.Model.TweetModel", currentTweet.GetType().ToString());
@@ -104,14 +124,9 @@ namespace Twitter.Test
         public void TryToAddNewTweet_ShouldBeReturnTrueValue()
         {
             //arrange
-            var myTweet = new TweetModel()
-            {
-                Descripton = "test tweet",
-            };
-            var testCRUD = new TweetCRUD();
 
             //act
-            var currentTweet = testCRUD.AddTweet(myTweet);
+            var currentTweet = testCRUD.AddTweet(myTweetModel);
 
             //assert
             Assert.AreEqual(true, currentTweet);
@@ -121,17 +136,9 @@ namespace Twitter.Test
         public void TryToDeleteExistingTweet_ShouldBeReturnTrueValue()
         {
             //arrange
-            var myTweet = new TweetModel()
-            {
-                Descripton = "fsgsdgasdfasdf9348759646547568",
-                IdTweet = 10,
-                IdUser = 1,
-                CreatedOn = "2015-05-07 10:18:47"
-            };
-            var testCRUD = new TweetCRUD();
 
             //act
-            var currentTweet = testCRUD.Delete(myTweet);
+            var currentTweet = testCRUD.Delete(existingTweet);
 
             //assert
             Assert.AreEqual(true, currentTweet);
@@ -141,17 +148,9 @@ namespace Twitter.Test
         public void TryToDeleteNonExistingTweet_ShouldBeReturnFalseValue()
         {
             //arrange
-            var myTweet = new TweetModel()
-            {
-                Descripton = "vasea roma jenea",
-                IdTweet = 10,
-                IdUser = -3,
-                CreatedOn = "2015-05-07 10:18:47"
-            };
-            var testCRUD = new TweetCRUD();
 
             //act
-            var currentTweet = testCRUD.Delete(myTweet);
+            var currentTweet = testCRUD.Delete(nonExistTweet);
 
             //assert
             Assert.AreEqual(false, currentTweet);
@@ -161,7 +160,6 @@ namespace Twitter.Test
         public void TryToReadAllTweets_ShouldBeReturnTweetModelList()
         {
             //arrange
-            var testCRUD = new TweetCRUD();
 
             //act
             var expectedType = testCRUD.Read();

@@ -11,16 +11,23 @@ namespace Twitter.CRUD.CRUD
 {
     public class UserCRUD
     {
+        #region Private
+        twitterEntities dbContext;
+        UserConvertor UserConverting;
+        #endregion
+
+        public  UserCRUD() 
+        {
+            dbContext = new twitterEntities();
+            UserConverting = new UserConvertor();
+        }
 
         public bool AddUser(UserModel UserToAdding)
         {
-            twitterEntities dbContext = new twitterEntities();
-            UserConvertor UserConverting = new UserConvertor();
             var addUser = UserConverting.ConvertToDAL(UserToAdding);
             var userList =
-                       dbContext.Users.Where
-                       (currentUser => currentUser.email.Equals(addUser.email)).
-                       FirstOrDefault();
+                       dbContext.Users.FirstOrDefault
+                       (currentUser => currentUser.email == addUser.email);
             if (userList == null)
             {
                 dbContext.Users.Add(addUser);
@@ -35,15 +42,13 @@ namespace Twitter.CRUD.CRUD
 
         public bool Delete(UserModel UserToDeleting)
         {
-            twitterEntities dbContext = new twitterEntities();
-            UserConvertor UserConverting = new UserConvertor();
             var deleteUser = UserConverting.ConvertToDAL(UserToDeleting);
 
             var userList =
-                       dbContext.Users.Where
-                       (currentUser => currentUser.email.Equals(deleteUser.email)).
-                       FirstOrDefault();
+                       dbContext.Users.FirstOrDefault
+                       (currentUser => currentUser.email == deleteUser.email);
             if (userList != null)
+
             {
                 dbContext.Users.Remove(userList);
                 dbContext.SaveChanges();
@@ -58,8 +63,6 @@ namespace Twitter.CRUD.CRUD
         //TODO Reading USers method
         public List<UserModel> Read()
         {
-            twitterEntities dbContext = new twitterEntities();
-            UserConvertor UserConverting = new UserConvertor();
             var userList = new List<UserModel>();
 
             foreach (var currentUser in dbContext.Users)

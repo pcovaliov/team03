@@ -12,30 +12,31 @@ using Twitter.CRUD;
 namespace Twitter.BL
 {
   public class UserBL
-    {
+  {
+      #region Private
+      UserCRUD UserCrud;
+      TweetCRUD TweetCrud;
+      #endregion
+
+      public UserBL()
+      {
+          UserCrud = new UserCRUD();
+          TweetCrud = new TweetCRUD();
+      }
+
       public bool Register(UserModel CurrentUser) 
       {
-        UserCRUD AddingUser = new UserCRUD();
-        if (AddingUser.AddUser(CurrentUser))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+          return UserCrud.AddUser(CurrentUser);
       }
 
         public int Login(UserModel UserToLogin)
         {
-            UserCRUD readingUsers = new UserCRUD();
-            UserConvertor UserConverting = new UserConvertor();
             var userList =
-                      readingUsers.Read().Where
+                      UserCrud.Read().First
                       (currentUser => currentUser.Email.Equals(UserToLogin.Email)
                           &&
                        currentUser.UserPassword.Equals(UserToLogin.UserPassword)
-                          ).FirstOrDefault();
+                          );
             if (userList != null)
             {
                 return userList.IdUser;
@@ -48,22 +49,12 @@ namespace Twitter.BL
 
         public List<UserModel> SelectUsers()
         {
-            UserCRUD readingUsers = new UserCRUD();
-
-            return readingUsers.Read();
+            return UserCrud.Read();
         }
 
         public bool Message(TweetModel CurrentTweet)
         {
-            TweetCRUD AddingTweet = new TweetCRUD();
-            if (AddingTweet.AddTweet(CurrentTweet))
-            {
-                return true;
-            }
-            else 
-            {
-                return false;
-            }
+            return TweetCrud.AddTweet(CurrentTweet);   
         }
       
     }

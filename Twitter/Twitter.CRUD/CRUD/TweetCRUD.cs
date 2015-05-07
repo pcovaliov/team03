@@ -12,8 +12,16 @@ namespace Twitter.CRUD
 {
     public class TweetCRUD
     {
+        #region Private
+        TweetConvertor TweetConverting;
+        twitterEntities dbContext;
+        #endregion
 
-        private TweetConvertor TweetConverting = new TweetConvertor();
+        public TweetCRUD() 
+        {
+            TweetConverting = new TweetConvertor();
+            dbContext = new twitterEntities();
+        }
 
         public bool AddTweet(TweetModel TweetToAdding)
         {
@@ -51,8 +59,6 @@ namespace Twitter.CRUD
 
         public bool Delete(TweetModel TweetToDeleting)
         {
-            twitterEntities dbContext = new twitterEntities();
-            TweetConvertor TweetConverting = new TweetConvertor();
             var deleteTweet = TweetConverting.ConvertTweetToDAL(TweetToDeleting);
             var tweetList =
                       dbContext.Tweets.Where
@@ -71,10 +77,7 @@ namespace Twitter.CRUD
         }
         public List<TweetModel> Read()
         {
-            twitterEntities dbContext = new twitterEntities();
-            TweetConvertor TweetConverting = new TweetConvertor();
             var tweetList = new List<TweetModel>();
-
             foreach (var currentTweet in dbContext.Tweets)
             {
                 tweetList.Add(TweetConverting.ConvertTweetToModel(currentTweet));
