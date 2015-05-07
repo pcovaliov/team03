@@ -15,5 +15,6 @@ namespace Twitter.Model
         public string Descripton { get; set; }
         public int IdUser { get; set; }
         public string CreatedOn { get; set; }
+        public int IdTweet { get; set; }
     }
 }

@@ -36,6 +36,7 @@ namespace Twitter.CRUD.Convertor
             currentTweet.Descripton = convertedTweet.descripton;
             currentTweet.IdUser = convertedTweet.id_user ?? 1;
             currentTweet.CreatedOn = convertedTweet.created_on;
+            currentTweet.IdTweet = convertedTweet.id_tweet;
             return currentTweet;
         }
     }

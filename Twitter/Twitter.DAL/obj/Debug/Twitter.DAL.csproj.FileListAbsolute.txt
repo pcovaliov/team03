@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 D:\ASP.Net\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.dll.config
 D:\ASP.Net\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.dll
 D:\ASP.Net\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.pdb
@@ -20,4 +20,4 @@ D:\Project for Internship\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.dll
 D:\Project for Internship\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.pdb
 D:\Project for Internship\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.SqlServer.dll
 D:\Project for Internship\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.SqlServer.xml
->>>>>>> TweetFormEP
+

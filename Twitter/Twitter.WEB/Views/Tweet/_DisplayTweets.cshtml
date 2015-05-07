@@ -1,0 +1,43 @@
+﻿@model PagedList.IPagedList<Twitter.Model.TweetModel>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<table>
+    <tr>
+        <th>
+           @* @Html.DisplayNameFor(model => model.Descripton)*@
+            Name
+        </th>
+       
+        <th>
+           @* @Html.DisplayNameFor(model => model.CreatedOn)*@
+            Created On
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripton)
+        </td>       
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdTweet}) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdTweet }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdTweet })
+        </td>
+    </tr>
+}
+
+</table>
+
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) 
+from @Model.PageCount
+ 
+@Html.PagedListPager(Model, page => Url.Action("Message",  new { page }))
+
+
+
