@@ -32,6 +32,7 @@ namespace Twitter.CRUD.CRUD
                 return false;
             }
         }
+
         public bool Delete(UserModel UserToDeleting)
         {
             twitterEntities dbContext = new twitterEntities();

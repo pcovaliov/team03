@@ -35,8 +35,12 @@
             </style>
  
             <h2 align = "center">Display Users</h2>
+            <div align ="center">
            Hello, @Session["LogedName"].ToString();
             IDUser @Session["LogedId"].ToString();
+                <br/>
+                <br/>
+                </div>
  
                 <div align = "center">
                     @grid.GetHtml(tableStyle:"gridtable",
@@ -44,10 +48,14 @@
                                 grid.Column("FirstName","First Name"),
                                 grid.Column("LastName","Last Name"),
                                 grid.Column("Email","Email"),
-                                grid.Column("Avatar","Avatar")
+                                grid.Column("Avatar","Avatar"),
+                                grid.Column(header: "Action", format: (item) => Html.ActionLink("Delete", "Login"))
                             )
                         )      
-    
                 </div>
+
+<div align ="center">
+    @Html.ActionLink("Tweets", "Message", "Tweet")
+</div>
 
 

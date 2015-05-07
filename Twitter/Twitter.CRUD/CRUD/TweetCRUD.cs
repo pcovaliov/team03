@@ -17,7 +17,8 @@ namespace Twitter.CRUD
 
         public bool AddTweet(TweetModel TweetToAdding)
         {
-            
+            try
+            {
                 using (twitterEntities dbContext = new twitterEntities())
                 {
                     var addTweet = TweetConverting.ConvertTweetToDAL(TweetToAdding);
@@ -26,9 +27,27 @@ namespace Twitter.CRUD
                     return true;
                 }
             }
-            
-            
-        
+            catch (DbEntityValidationException ex)
+            {
+                foreach (DbEntityValidationResult item in ex.EntityValidationErrors)
+                {
+                    // Get entry
+
+                    DbEntityEntry entry = item.Entry;
+                    string entityTypeName = entry.Entity.GetType().Name;
+
+                    // Display or log error messages
+
+                    foreach (DbValidationError subItem in item.ValidationErrors)
+                    {
+                        string message = string.Format("Error '{0}' occurred in {1} at {2}",
+                                 subItem.ErrorMessage, entityTypeName, subItem.PropertyName);
+                        Console.WriteLine(message);
+                    }
+                }
+                return false;
+            } 
+        }
 
         public bool Delete(TweetModel TweetToDeleting)
         {
