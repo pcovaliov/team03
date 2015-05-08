@@ -13,25 +13,26 @@ namespace Twitter.BL
 {
   public class UserBL
     {
+        #region Private
+        UserCRUD UserCrud;
+        TweetCRUD TweetCrud;
+        #endregion
+
+        public UserBL()
+        {
+            UserCrud = new UserCRUD();
+            TweetCrud = new TweetCRUD();
+        }
       public bool Register(UserModel CurrentUser) 
       {
-        UserCRUD AddingUser = new UserCRUD();
-        if (AddingUser.AddUser(CurrentUser))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+          return UserCrud.AddUser(CurrentUser);
+
       }
 
         public int Login(UserModel UserToLogin)
         {
-            UserCRUD readingUsers = new UserCRUD();
-            UserConvertor UserConverting = new UserConvertor();
             var userList =
-                      readingUsers.Read().Where
+                      UserCrud.Read().Where
                       (currentUser => currentUser.Email.Equals(UserToLogin.Email)
                           &&
                        currentUser.UserPassword.Equals(UserToLogin.UserPassword)
@@ -48,16 +49,13 @@ namespace Twitter.BL
 
         public List<UserModel> SelectUsers()
         {
-            UserCRUD readingUsers = new UserCRUD();
-
-            return readingUsers.Read();
+            return UserCrud.Read();
         }
 
         public UserModel EditUser(int idUser)
         {
-            UserCRUD editingUser = new UserCRUD();
             UserModel editingCurrentUser = new UserModel();
-            editingCurrentUser = editingUser.GetUserById(idUser);
+            editingCurrentUser = UserCrud.GetUserById(idUser);
             if (editingCurrentUser != null)
             {
                 return editingCurrentUser;
@@ -71,15 +69,14 @@ namespace Twitter.BL
 
         public bool EditUser(UserModel currentUser)
         {
-            UserCRUD changeUser = new UserCRUD();
-            if (changeUser.ChangeUser(currentUser))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return UserCrud.ChangeUser(currentUser);
+
+        }
+
+        public bool DeleteUser(int idUser)
+        {
+            return UserCrud.Delete(idUser);
+
         }
      
         

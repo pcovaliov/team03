@@ -24,9 +24,9 @@ namespace Twitter.WEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Message(TweetModel CurrentTweet)
         {
-
+            int idUser = int.Parse(Session["LogedId"].ToString());    
             TweetBL NewMessage = new TweetBL();
-            if (NewMessage.Message(CurrentTweet))
+            if (NewMessage.Message(CurrentTweet,idUser))
             {
                 ViewBag.Message = "Your message  was added successfuly";
             }
@@ -42,9 +42,10 @@ namespace Twitter.WEB.Controllers
         {
             int pageSize = 25;
             int pageNumber = (page ?? 1);
+            int idUser = int.Parse(Session["LogedId"].ToString());
             List<TweetModel> allTweets = new List<TweetModel>();
             TweetBL tweets = new TweetBL();
-            allTweets = tweets.SelectTweets().OrderByDescending(currentTweet => currentTweet.CreatedOn).ToList();         
+            allTweets = tweets.SelectTweets(idUser).OrderByDescending(currentTweet => currentTweet.CreatedOn).ToList();         
             return PartialView("_DisplayTweets", allTweets.ToPagedList(pageNumber, pageSize));
         }
 

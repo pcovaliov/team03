@@ -13,13 +13,12 @@ namespace Twitter.CRUD.Convertor
 {
     public class TweetConvertor
     {
-        public Tweet ConvertTweetToDAL(TweetModel convertedTweet)
+        public Tweet ConvertTweetToDAL(TweetModel convertedTweet, int idUser)
         {
             Tweet currentTweet = new Tweet();
-            int id = 1;
             currentTweet.descripton = convertedTweet.Descripton;
             currentTweet.created_on = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            currentTweet.id_user = id;
+            currentTweet.id_user = idUser;
             return currentTweet;
         }
 

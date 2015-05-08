@@ -12,10 +12,18 @@ namespace Twitter.CRUD.CRUD
 {
     public class UserCRUD
     {
-       public twitterEntities dbContext = new twitterEntities();
+        #region Private
+        twitterEntities dbContext;
+        UserConvertor UserConverting;
+        #endregion
+
+        public UserCRUD()
+        {
+            dbContext = new twitterEntities();
+            UserConverting = new UserConvertor();
+        }
         public bool AddUser(UserModel UserToAdding)
         {
-            UserConvertor UserConverting = new UserConvertor();
             var addUser = UserConverting.ConvertToDAL(UserToAdding);
             var userList =
                        dbContext.Users.Where
@@ -32,18 +40,13 @@ namespace Twitter.CRUD.CRUD
                 return false;
             }
         }
-        public bool Delete(UserModel UserToDeleting)
-        {      
-            UserConvertor UserConverting = new UserConvertor();
-            var deleteUser = UserConverting.ConvertToDAL(UserToDeleting);
-
-            var userList =
-                       dbContext.Users.Where
-                       (currentUser => currentUser.email.Equals(deleteUser.email)).
-                       FirstOrDefault();
-            if (userList != null)
+        public bool Delete(int idUser)
+        {
+            var userDeleted =
+            dbContext.Users.FirstOrDefault(currentUser => currentUser.id_user.Equals(idUser));
+            if (userDeleted != null)
             {
-                dbContext.Users.Remove(deleteUser);
+                dbContext.Users.Remove(userDeleted);
                 dbContext.SaveChanges();
                 return true;
             }
@@ -51,13 +54,14 @@ namespace Twitter.CRUD.CRUD
             {
                 return false;
             }
+
         }
 
         public UserModel GetUserById(int idUser)
         {
             UserModel editedUser = new UserModel();
             var userEdit =
-                dbContext.Users.Where(currentUser => currentUser.id_user.Equals(idUser)).FirstOrDefault();
+                dbContext.Users.FirstOrDefault(currentUser => currentUser.id_user.Equals(idUser));
             if (userEdit != null)
             {
                 editedUser.IdUser = userEdit.id_user;
@@ -71,33 +75,38 @@ namespace Twitter.CRUD.CRUD
             return null;
         }
 
-        //TODO Reading USers method
         public List<UserModel> Read()
-        {          
-            UserConvertor userConverting = new UserConvertor();
+        {
             var userList = new List<UserModel>();
 
             foreach (var currentUser in dbContext.Users)
             {
-                userList.Add(userConverting.ConvertToModel(currentUser));
+                userList.Add(UserConverting.ConvertToModel(currentUser));
             }
 
             return userList;
         }
 
-        public bool ChangeUser(UserModel currentUser) 
-        { 
-            UserConvertor changeUser = new UserConvertor();
-            var currentUserToChange = changeUser.ConvertToDAL(currentUser);
+        public bool ChangeUser(UserModel currentUser)
+        {
+            var currentUserToChange = UserConverting.ConvertToDAL(currentUser);
             var userToChange =
                 dbContext.Users.FirstOrDefault(user => user.id_user == currentUserToChange.id_user);
-            userToChange.first_name = currentUserToChange.first_name;
+            if (userToChange != null)
+            {
+                userToChange.first_name = currentUserToChange.first_name;
                 userToChange.last_name = currentUserToChange.last_name;
                 userToChange.email = currentUserToChange.email;
                 userToChange.avatar = currentUserToChange.avatar;
-                userToChange.userPassword = currentUserToChange.userPassword;        
-            dbContext.SaveChanges();
-            return true;
+                userToChange.userPassword = currentUserToChange.userPassword;
+                dbContext.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }

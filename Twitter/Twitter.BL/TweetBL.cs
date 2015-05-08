@@ -13,17 +13,17 @@ namespace Twitter.BL
 {
     public class TweetBL
     {
-        public List<TweetModel> SelectTweets()
+        public List<TweetModel> SelectTweets(int idUser)
         {
             TweetCRUD readingTweets = new TweetCRUD();
 
-            return readingTweets.Read();
+            return readingTweets.Read(idUser);
         }
 
-        public bool Message(TweetModel CurrentTweet)
+        public bool Message(TweetModel CurrentTweet, int idUser)
         {
             TweetCRUD AddingTweet = new TweetCRUD();
-            if (AddingTweet.AddTweet(CurrentTweet))
+            if (AddingTweet.AddTweet(CurrentTweet, idUser))
             {
                 return true;
             }

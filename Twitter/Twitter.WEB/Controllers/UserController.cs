@@ -104,5 +104,19 @@ namespace Twitter.WEB.Controllers
             }
         }
 
+        public ActionResult Delete(int item)
+        {
+            UserBL deletedUser = new UserBL();
+            if (deletedUser.DeleteUser(item))
+            {
+                return RedirectToAction("DisplayUsers");
+            }
+            else
+            {
+                return View();
+            }
+
+        }
+
     }
 }
