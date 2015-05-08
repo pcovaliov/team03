@@ -17,6 +17,7 @@
     </tr>
 
 @foreach (var item in Model) {
+    
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Descripton)
@@ -25,8 +26,8 @@
             @Html.DisplayFor(modelItem => item.CreatedOn)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdTweet}) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdTweet })
+            @Html.ActionLink("Edit", "Edit", new { item=item.IdTweet}) |
+            @Html.ActionLink("Delete", "Delete", new { item=item.IdTweet })
         </td>
     </tr>
 }

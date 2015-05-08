@@ -49,8 +49,48 @@ namespace Twitter.WEB.Controllers
             return PartialView("_DisplayTweets", allTweets.ToPagedList(pageNumber, pageSize));
         }
 
+        public ActionResult Delete(int item)
+        {
+            TweetBL deletedTweet = new TweetBL();
+            if (deletedTweet.DeleteTweet(item))
+            {
+                return RedirectToAction("Message");
+            }
+            else
+            {
+                return View();
+            }
 
-        
+        }
+        [HttpGet]
+        public ActionResult Edit(int item)
+        {
+            TweetBL editTweet = new TweetBL();
+            var currentTweet = editTweet.EditTweet(item);
+            if (currentTweet != null)
+            {
+                return View(currentTweet);
+            }
+            else
+            {
+                return View();
+            }
+
+        }
+        [HttpPost]
+        public ActionResult Edit(TweetModel currentTweet)
+        {
+            TweetBL changeTweet = new TweetBL();
+            currentTweet.IdUser = int.Parse(Session["LogedId"].ToString());
+            if (changeTweet.EditTweet(currentTweet))
+            {
+                return RedirectToAction("Message");
+            }
+            else
+            {
+                return View(currentTweet);
+            }
+        }
 
     }
 }

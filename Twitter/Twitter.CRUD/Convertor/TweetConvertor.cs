@@ -19,6 +19,7 @@ namespace Twitter.CRUD.Convertor
             currentTweet.descripton = convertedTweet.Descripton;
             currentTweet.created_on = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             currentTweet.id_user = idUser;
+            currentTweet.id_tweet = convertedTweet.IdTweet;
             return currentTweet;
         }
 
