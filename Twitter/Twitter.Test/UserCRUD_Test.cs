@@ -16,9 +16,14 @@ namespace Twitter.Test
         UserModel myUserModel;
         User myUser;
         UserModel newUserModel;
+        UserModel nullUser;
         UserModel nonExistUser;
         UserConvertor testConvertor;
         UserCRUD testCRUD;
+        int getUser;
+        int getNonExistingUser;
+        UserModel userForChange;
+        UserModel userForChangeWhatNotExists;
         #endregion
 
         public UserCRUD_Test()
@@ -65,6 +70,38 @@ namespace Twitter.Test
                 email = "scutari.mihai@gmail.com",
                 avatar = "1.jpg",
                 userPassword = "endavatest",
+            };
+            nullUser = new UserModel()
+            {
+                FirstName = "",
+                LastName = "",
+                Email = "",
+                Avatar = "",
+                UserPassword = "",
+                ConfirmPassword = "",
+                IdUser = 0
+            };
+            getUser = 10;
+            getNonExistingUser = -3;
+            userForChange = new UserModel()
+            {
+                IdUser = 4,
+                FirstName = "popodneac",
+                LastName = "eugen",
+                Email = "epopodneac@gmail.com",
+                Avatar = "1.jpg",
+                UserPassword = "endavatest",
+                ConfirmPassword = "endavatest"
+            };
+            userForChangeWhatNotExists = new UserModel()
+            {
+                IdUser = -1,
+                FirstName = "noName",
+                LastName = "noLastaName",
+                Email = "noMail@gmail.com",
+                Avatar = "noavatar",
+                UserPassword = "noPassword",
+                ConfirmPassword = "noConfirm"
             };
         }
 
@@ -158,6 +195,18 @@ namespace Twitter.Test
         }
 
         [TestMethod]
+        public void TryToInsertNullUser_ShouldBeReturnBoolValueFalse()
+        {
+            //arrange
+
+            //act
+            bool control = testCRUD.AddUser(nullUser);
+
+            //assert
+            Assert.AreEqual(false, control);
+        }
+
+        [TestMethod]
         public void TryToDeleteExistingUser_ShouldBeReturnBoolValueTrue()
         {
             //arrange
@@ -192,6 +241,54 @@ namespace Twitter.Test
 
             //assert
             Assert.AreEqual("System.Collections.Generic.List`1[Twitter.Model.UserModel]", expectedType.GetType().ToString());
+        }
+
+        [TestMethod]
+        public void TryToGetUserById_ShouldBeReturnUserModelObject()
+        {
+            //arrange
+
+            //act
+            var expectedType = testCRUD.GetUserById(getUser);
+
+            //assert
+            Assert.AreEqual("Twitter.Model.UserModel", expectedType.GetType().ToString());
+        }
+
+        [TestMethod]
+        public void TryToGetNonExistingUserById_ShouldBeReturFalseValue()
+        {
+            //arrange
+
+            //act
+            var expectedType = testCRUD.GetUserById(getUser);
+
+            //assert
+            Assert.AreEqual(false, expectedType.GetType().IsValueType);
+        }
+
+        [TestMethod]
+        public void TryToChangeExistingUser_ShouldBeReturTrueValue()
+        {
+            //arrange
+
+            //act
+            var expectedValue = testCRUD.ChangeUser(userForChange);
+
+            //assert
+            Assert.AreEqual(true, expectedValue);
+        }
+
+        [TestMethod]
+        public void TryToChangeNonExistingUser_ShouldBeReturFalseValue()
+        {
+            //arrange
+
+            //act
+            var expectedValue = testCRUD.ChangeUser(userForChangeWhatNotExists);
+
+            //assert
+            Assert.AreEqual(false, expectedValue);
         }
     }
 }

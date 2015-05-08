@@ -174,3 +174,7 @@ C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.DAL.pdb
 C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.csprojResolveAssemblyReference.cache
 C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.dll
 C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.pdb
+D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\PagedList.dll
+D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\PagedList.Mvc.dll
+D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\PagedList.xml
+D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\PagedList.Mvc.xml
