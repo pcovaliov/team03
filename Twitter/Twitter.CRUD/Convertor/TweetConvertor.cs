@@ -19,13 +19,6 @@ namespace Twitter.CRUD.Convertor
             int id = 1;
             currentTweet.descripton = convertedTweet.Descripton;
             currentTweet.created_on = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            currentTweet.id_tweet = convertedTweet.IdTweet;
-            //HttpContext httpContext = HttpContext.Current;
-            //if (httpContext.ApplicationInstance.Session.Count > 0)
-            //{
-            //    id = int.Parse(httpContext.ApplicationInstance.Session["ID"].ToString());
-            //}
-
             currentTweet.id_user = id;
             return currentTweet;
         }
@@ -36,6 +29,7 @@ namespace Twitter.CRUD.Convertor
             currentTweet.Descripton = convertedTweet.descripton;
             currentTweet.IdUser = convertedTweet.id_user ?? 1;
             currentTweet.CreatedOn = convertedTweet.created_on;
+            currentTweet.IdTweet = convertedTweet.id_tweet;
             return currentTweet;
         }
     }

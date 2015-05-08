@@ -12,31 +12,30 @@ using Twitter.CRUD;
 namespace Twitter.BL
 {
   public class UserBL
-  {
-      #region Private
-      UserCRUD UserCrud;
-      TweetCRUD TweetCrud;
-      #endregion
-
-      public UserBL()
-      {
-          UserCrud = new UserCRUD();
-          TweetCrud = new TweetCRUD();
-      }
-
+    {
       public bool Register(UserModel CurrentUser) 
       {
-          return UserCrud.AddUser(CurrentUser);
+        UserCRUD AddingUser = new UserCRUD();
+        if (AddingUser.AddUser(CurrentUser))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
       }
 
         public int Login(UserModel UserToLogin)
         {
+            UserCRUD readingUsers = new UserCRUD();
+            UserConvertor UserConverting = new UserConvertor();
             var userList =
-                      UserCrud.Read().First
+                      readingUsers.Read().Where
                       (currentUser => currentUser.Email.Equals(UserToLogin.Email)
                           &&
                        currentUser.UserPassword.Equals(UserToLogin.UserPassword)
-                          );
+                          ).FirstOrDefault();
             if (userList != null)
             {
                 return userList.IdUser;
@@ -49,13 +48,41 @@ namespace Twitter.BL
 
         public List<UserModel> SelectUsers()
         {
-            return UserCrud.Read();
+            UserCRUD readingUsers = new UserCRUD();
+
+            return readingUsers.Read();
         }
 
-        public bool Message(TweetModel CurrentTweet)
+        public UserModel EditUser(int idUser)
         {
-            return TweetCrud.AddTweet(CurrentTweet);   
+            UserCRUD editingUser = new UserCRUD();
+            UserModel editingCurrentUser = new UserModel();
+            editingCurrentUser = editingUser.GetUserById(idUser);
+            if (editingCurrentUser != null)
+            {
+                return editingCurrentUser;
+            }
+            else
+            {
+                return null;
+            }
+
         }
+
+        public bool EditUser(UserModel currentUser)
+        {
+            UserCRUD changeUser = new UserCRUD();
+            if (changeUser.ChangeUser(currentUser))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+     
+        
       
     }
 }

@@ -12,53 +12,28 @@ namespace Twitter.CRUD
 {
     public class TweetCRUD
     {
-        #region Private
-        TweetConvertor TweetConverting;
-        twitterEntities dbContext;
-        #endregion
 
-        public TweetCRUD() 
-        {
-            TweetConverting = new TweetConvertor();
-            dbContext = new twitterEntities();
-        }
+        private TweetConvertor TweetConverting = new TweetConvertor();
 
         public bool AddTweet(TweetModel TweetToAdding)
         {
-            try
-            {
+            
                 using (twitterEntities dbContext = new twitterEntities())
                 {
                     var addTweet = TweetConverting.ConvertTweetToDAL(TweetToAdding);
-                    var a = dbContext.Tweets.Add(addTweet);
+                    dbContext.Tweets.Add(addTweet);
                     dbContext.SaveChanges();
                     return true;
                 }
             }
-            catch (DbEntityValidationException ex)
-            {
-                foreach (DbEntityValidationResult item in ex.EntityValidationErrors)
-                {
-                    // Get entry
-
-                    DbEntityEntry entry = item.Entry;
-                    string entityTypeName = entry.Entity.GetType().Name;
-
-                    // Display or log error messages
-
-                    foreach (DbValidationError subItem in item.ValidationErrors)
-                    {
-                        string message = string.Format("Error '{0}' occurred in {1} at {2}",
-                                 subItem.ErrorMessage, entityTypeName, subItem.PropertyName);
-                        Console.WriteLine(message);
-                    }
-                }
-                return false;
-            } 
-        }
+            
+            
+        
 
         public bool Delete(TweetModel TweetToDeleting)
         {
+            twitterEntities dbContext = new twitterEntities();
+            TweetConvertor TweetConverting = new TweetConvertor();
             var deleteTweet = TweetConverting.ConvertTweetToDAL(TweetToDeleting);
             var tweetList =
                       dbContext.Tweets.Where
@@ -66,7 +41,7 @@ namespace Twitter.CRUD
                       FirstOrDefault();
             if (tweetList != null)
             {
-                dbContext.Tweets.Remove(tweetList);
+                dbContext.Tweets.Remove(deleteTweet);
                 dbContext.SaveChanges();
                 return true;
             }
@@ -77,7 +52,10 @@ namespace Twitter.CRUD
         }
         public List<TweetModel> Read()
         {
+            twitterEntities dbContext = new twitterEntities();
+            TweetConvertor TweetConverting = new TweetConvertor();
             var tweetList = new List<TweetModel>();
+
             foreach (var currentTweet in dbContext.Tweets)
             {
                 tweetList.Add(TweetConverting.ConvertTweetToModel(currentTweet));

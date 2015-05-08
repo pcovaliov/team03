@@ -13,6 +13,7 @@ namespace Twitter.CRUD.Convertor
         public User ConvertToDAL(UserModel convertedUser)
         {
             User currentUser = new User();
+            currentUser.id_user = convertedUser.IdUser;
             currentUser.first_name = convertedUser.FirstName;
             currentUser.last_name = convertedUser.LastName;
             currentUser.email = convertedUser.Email;
