@@ -235,6 +235,7 @@
     <Content Include="Views\Tweet\_DisplayTweets.cshtml" />
     <Content Include="Views\User\DisplayUsers.cshtml" />
     <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\Tweet\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

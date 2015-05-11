@@ -2,7 +2,19 @@
 @using PagedList.Mvc;
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
-<table>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<br>
+<br>
+<br>
+<div align="center">
+<table class="table">
     <tr>
         <th>
            @* @Html.DisplayNameFor(model => model.Descripton)*@
@@ -25,8 +37,8 @@
             @Html.DisplayFor(modelItem => item.CreatedOn)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdTweet}) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdTweet })
+            @Html.ActionLink("Edit", "Edit", new { item=item.IdTweet}) |
+            @Html.ActionLink("Delete", "Delete", new { item=item.IdTweet })
         </td>
     </tr>
 }
@@ -37,6 +49,7 @@ Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
 from @Model.PageCount
  
 @Html.PagedListPager(Model, page => Url.Action("Message",  new { page }))
+</div>
 
 
 

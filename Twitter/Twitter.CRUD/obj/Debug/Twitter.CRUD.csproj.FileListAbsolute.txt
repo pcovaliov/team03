@@ -40,3 +40,17 @@ C:\Users\vcudalb\Desktop\Twitter\Twitter.CRUD\bin\Debug\EntityFramework.SqlServe
 C:\Users\vcudalb\Desktop\Twitter\Twitter.CRUD\obj\Debug\Twitter.CRUD.csprojResolveAssemblyReference.cache
 C:\Users\vcudalb\Desktop\Twitter\Twitter.CRUD\obj\Debug\Twitter.CRUD.dll
 C:\Users\vcudalb\Desktop\Twitter\Twitter.CRUD\obj\Debug\Twitter.CRUD.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\Twitter.CRUD.dll.config
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\Twitter.CRUD.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\Twitter.CRUD.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\EntityFramework.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\Twitter.DAL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\Twitter.Model.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\Twitter.Model.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\EntityFramework.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\obj\Debug\Twitter.CRUD.csprojResolveAssemblyReference.cache
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\obj\Debug\Twitter.CRUD.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.CRUD\obj\Debug\Twitter.CRUD.pdb

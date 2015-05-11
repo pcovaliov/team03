@@ -30,25 +30,7 @@ namespace Twitter.CRUD
                     dbContext.SaveChanges();
                     return true;
             }
-                               
-        //public bool Delete(TweetModel TweetToDeleting)
-        //{
-        //    var deleteTweet = TweetConverting.ConvertTweetToDAL(TweetToDeleting);
-        //    var tweetList =
-        //              dbContext.Tweets.Where
-        //              (currentTweet => currentTweet.id_tweet.Equals(deleteTweet.id_tweet)).
-        //              FirstOrDefault();
-        //    if (tweetList != null)
-        //    {
-        //        dbContext.Tweets.Remove(deleteTweet);
-        //        dbContext.SaveChanges();
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+
         public List<TweetModel> Read(int idUser)
         {
             var tweetList = new List<TweetModel>();
@@ -60,6 +42,59 @@ namespace Twitter.CRUD
             }
 
             return tweetList;
+        }
+
+        public bool DeleteTweet(int idTweet)
+        {
+            var tweetDeleted =
+            dbContext.Tweets.FirstOrDefault(currentTweet => currentTweet.id_tweet.Equals(idTweet));
+            if (tweetDeleted != null)
+            {
+                dbContext.Tweets.Remove(tweetDeleted);
+                dbContext.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public TweetModel GetTweetById(int idTweet)
+        {
+            TweetModel editedTweet = new TweetModel();
+            var tweetEdit =
+                dbContext.Tweets.FirstOrDefault(currentTweet => currentTweet.id_tweet.Equals(idTweet));
+            if (tweetEdit != null)
+            {
+                editedTweet.IdTweet = tweetEdit.id_tweet;
+                editedTweet.Descripton = tweetEdit.descripton;
+                editedTweet.CreatedOn = tweetEdit.created_on;
+                return editedTweet;
+            }
+            return null;
+
+        }
+
+        public bool ChangeTweet(TweetModel currentTweet, int idUser)
+        {
+            var currentTweetToChange = TweetConverting.ConvertTweetToDAL(currentTweet, idUser);
+            var tweetToChange =
+                dbContext.Tweets.FirstOrDefault(tweet => tweet.id_tweet == currentTweetToChange.id_tweet);
+            if (tweetToChange != null)
+            {
+                tweetToChange.id_tweet = currentTweetToChange.id_tweet;
+                tweetToChange.descripton = currentTweetToChange.descripton;
+                tweetToChange.created_on = currentTweetToChange.created_on;
+                dbContext.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
     }

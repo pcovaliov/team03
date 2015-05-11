@@ -5,7 +5,7 @@
 @using (Html.BeginForm("Login","User",FormMethod.Post))
 {        
  @Html.ValidationSummary(true)
-   <fieldset>
+   <fieldset align="center">
        <legend>Login</legend>
    @Html.AntiForgeryToken()  
     @if (ViewBag.Message == null)
@@ -28,7 +28,7 @@
         }
 
 <div class="editor-label">
-            @Html.LabelFor(model => model.Email)
+          @Html.LabelFor(model => model.Email)
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Email)

@@ -23,6 +23,9 @@ namespace Twitter.Test
         TweetModel myTweetModel;
         TweetModel existingTweet;
         Tweet myTweet;
+        int idUserOFTweet;
+        int existingIdTweet;
+        int nonExistingIdTweet;
         #endregion
 
         public TweetCRUD_Test()
@@ -54,6 +57,9 @@ namespace Twitter.Test
                 IdUser = 1,
                 CreatedOn = "2015-05-07 10:18:47"
             };
+            idUserOFTweet = 10;
+            existingIdTweet = 1;
+            nonExistingIdTweet = -3;
         }
 
         private TestContext testContextInstance;
@@ -96,17 +102,17 @@ namespace Twitter.Test
         //
         #endregion
 
-        //[TestMethod]
-        //public void TryToConvertTweetModelIntoTweet_ShouldBeReturnTweetType()
-        //{
-        //    //arrange
+        [TestMethod]
+        public void TryToConvertTweetModelIntoTweet_ShouldBeReturnTweetType()
+        {
+            //arrange
 
-        //    //act
-        //    var currentTweet = testConvertor.ConvertTweetToDAL(myTweetModel);
+            //act
+            var currentTweet = testConvertor.ConvertTweetToDAL(myTweetModel, idUserOFTweet);
 
-        //    //assert
-        //    Assert.AreEqual("Twitter.DAL.Tweet", currentTweet.GetType().ToString());
-        //}
+            //assert
+            Assert.AreEqual("Twitter.DAL.Tweet", currentTweet.GetType().ToString());
+        }
 
         [TestMethod]
         public void TryToConvertTweetIntoTweetModel_ShouldBeReturnTweetModelType()
@@ -120,17 +126,17 @@ namespace Twitter.Test
             Assert.AreEqual("Twitter.Model.TweetModel", currentTweet.GetType().ToString());
         }
 
-        //[TestMethod]
-        //public void TryToAddNewTweet_ShouldBeReturnTrueValue()
-        //{
-        //    //arrange
+        [TestMethod]
+        public void TryToAddNewTweet_ShouldBeReturnTrueValue()
+        {
+            //arrange
 
-        //    //act
-        //    var currentTweet = testCRUD.AddTweet(myTweetModel);
+            //act
+            var currentTweet = testCRUD.AddTweet(myTweetModel, idUserOFTweet);
 
-        //    //assert
-        //    Assert.AreEqual(true, currentTweet);
-        //}
+            //assert
+            Assert.AreEqual(true, currentTweet);
+        }
 
         //[TestMethod]
         //public void TryToDeleteExistingTweet_ShouldBeReturnTrueValue()
@@ -138,7 +144,7 @@ namespace Twitter.Test
         //    //arrange
 
         //    //act
-        //    var currentTweet = testCRUD.Delete(existingTweet);
+        //    var currentTweet = testCRUD.Delete(existingTweet,existingIdTweet);
 
         //    //assert
         //    Assert.AreEqual(true, currentTweet);
@@ -157,15 +163,27 @@ namespace Twitter.Test
         //}
 
         [TestMethod]
-        public void TryToReadAllTweets_ShouldBeReturnTweetModelList()
+        public void TryToReadAllTweetsOfUser_ShouldBeReturnTweetModelList()
         {
             //arrange
-            int idUser = 1; 
+            int idUser = 1;
             //act
             var expectedType = testCRUD.Read(idUser);
 
             //assert
             Assert.AreEqual("System.Collections.Generic.List`1[Twitter.Model.TweetModel]", expectedType.GetType().ToString());
+        }
+
+        [TestMethod]
+        public void TryToReadAllTweetsOfNonExistingUser_ShouldBeReturnNullValue()
+        {
+            //arrange
+            int idUser = -5;
+            //act
+            var expectedType = testCRUD.Read(idUser);
+
+            //assert
+            Assert.AreEqual(false, expectedType.GetType().IsValueType);
         }
     }
 }

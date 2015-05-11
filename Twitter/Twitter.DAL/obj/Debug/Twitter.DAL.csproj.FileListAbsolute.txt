@@ -29,3 +29,13 @@ C:\Users\vcudalb\Desktop\Twitter\Twitter.DAL\bin\Debug\EntityFramework.SqlServer
 C:\Users\vcudalb\Desktop\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.csprojResolveAssemblyReference.cache
 C:\Users\vcudalb\Desktop\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.dll
 C:\Users\vcudalb\Desktop\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.dll.config
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.csprojResolveAssemblyReference.cache
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.pdb

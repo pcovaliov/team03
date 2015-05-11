@@ -33,6 +33,36 @@ namespace Twitter.BL
             }
         }
 
+        public bool DeleteTweet(int idTweet)
+        {
+            TweetCRUD TweetCrud = new TweetCRUD();
+            return TweetCrud.DeleteTweet(idTweet);
+
+        }
+
+        public TweetModel EditTweet(int idTweet)
+        {
+            TweetCRUD TweetCrud = new TweetCRUD();
+            TweetModel editingCurrentTweet = new TweetModel();
+            editingCurrentTweet = TweetCrud.GetTweetById(idTweet);
+            if (editingCurrentTweet != null)
+            {
+                return editingCurrentTweet;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        public bool EditTweet(TweetModel currentTweet)
+        {
+            TweetCRUD TweetCrud = new TweetCRUD();
+            return TweetCrud.ChangeTweet(currentTweet, currentTweet.IdUser);
+
+        }
+
 
     }
 }

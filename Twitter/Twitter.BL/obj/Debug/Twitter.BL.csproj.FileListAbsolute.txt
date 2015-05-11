@@ -46,3 +46,19 @@ C:\Users\vcudalb\Desktop\Twitter\Twitter.BL\bin\Debug\EntityFramework.SqlServer.
 C:\Users\vcudalb\Desktop\Twitter\Twitter.BL\obj\Debug\Twitter.BL.csprojResolveAssemblyReference.cache
 C:\Users\vcudalb\Desktop\Twitter\Twitter.BL\obj\Debug\Twitter.BL.dll
 C:\Users\vcudalb\Desktop\Twitter\Twitter.BL\obj\Debug\Twitter.BL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\Twitter.BL.dll.config
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\Twitter.BL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\Twitter.BL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\EntityFramework.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\Twitter.CRUD.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\Twitter.DAL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\Twitter.Model.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\Twitter.CRUD.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\Twitter.Model.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\EntityFramework.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\obj\Debug\Twitter.BL.csprojResolveAssemblyReference.cache
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\obj\Debug\Twitter.BL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.BL\obj\Debug\Twitter.BL.pdb
