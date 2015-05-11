@@ -252,7 +252,7 @@ namespace Twitter.Test
             var expectedType = testCRUD.GetUserById(getUser);
 
             //assert
-            Assert.AreEqual(true, expectedType.GetType().ToString());
+            Assert.AreEqual("Twitter.Model.UserModel", expectedType.GetType().ToString());
         }
 
         [TestMethod]
@@ -288,7 +288,7 @@ namespace Twitter.Test
             var expectedValue = testCRUD.ChangeUser(userForChangeWhatNotExists);
 
             //assert
-            Assert.AreEqual(true, expectedValue);
+            Assert.AreEqual(false, expectedValue);
         }
     }
 }
