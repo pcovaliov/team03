@@ -1,36 +1,38 @@
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\Twitter.Test.dll.config
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\Twitter.Test.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\Twitter.Test.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\EntityFramework.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\nunit.framework.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\Twitter.CRUD.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\Twitter.Model.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\Twitter.CRUD.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\Twitter.Model.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\EntityFramework.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\bin\Debug\nunit.framework.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\obj\Debug\Twitter.Test.csprojResolveAssemblyReference.cache
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\obj\Debug\Twitter.Test.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.Test\obj\Debug\Twitter.Test.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Test.dll.config
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Test.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Test.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\EntityFramework.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\EntityFramework.SqlServer.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\nunit.framework.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.CRUD.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Model.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.CRUD.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Model.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\EntityFramework.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\EntityFramework.SqlServer.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\nunit.framework.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\obj\Debug\Twitter.Test.csprojResolveAssemblyReference.cache
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\obj\Debug\Twitter.Test.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\obj\Debug\Twitter.Test.pdb
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\Twitter.Test.dll.config
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\Twitter.Test.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\Twitter.Test.pdb
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\EntityFramework.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\nunit.framework.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\EntityFramework.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\nunit.framework.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\obj\Debug\Twitter.Test.csprojResolveAssemblyReference.cache
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\obj\Debug\Twitter.Test.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\obj\Debug\Twitter.Test.pdb
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\Twitter.Models.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\Twitter.Services.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.pdb
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\Twitter.Models.pdb
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Test\bin\Debug\Twitter.Services.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.Test.dll.config
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.Test.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.Test.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\EntityFramework.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\nunit.framework.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.Models.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.Services.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.Models.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.Services.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\EntityFramework.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\nunit.framework.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\obj\Debug\Twitter.Test.csprojResolveAssemblyReference.cache
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\obj\Debug\Twitter.Test.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\obj\Debug\Twitter.Test.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.Convert.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Test\bin\Debug\Twitter.Convert.pdb

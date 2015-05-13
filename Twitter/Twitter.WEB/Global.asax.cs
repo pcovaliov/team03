@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Twitter.WEB.App_Start;
 
 namespace Twitter.WEB
 {
@@ -22,6 +23,9 @@ namespace Twitter.WEB
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            DependecyInjectionConfig.Configure();
+            
+
         }
     }
 }

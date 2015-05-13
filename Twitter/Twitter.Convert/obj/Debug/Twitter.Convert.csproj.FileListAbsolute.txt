@@ -1,0 +1,11 @@
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\bin\Debug\Twitter.Convert.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\bin\Debug\Twitter.Convert.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\bin\Debug\Twitter.DAL.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\bin\Debug\Twitter.Models.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\bin\Debug\EntityFramework.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\bin\Debug\Twitter.DAL.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\bin\Debug\Twitter.Models.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\bin\Debug\EntityFramework.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\obj\Debug\Twitter.Convert.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\obj\Debug\Twitter.Convert.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\obj\Debug\Twitter.Convert.csprojResolveAssemblyReference.cache

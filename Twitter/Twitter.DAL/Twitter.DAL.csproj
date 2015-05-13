@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{23A5D685-3ABE-4B29-B786-609B692B77F8}</ProjectGuid>
+    <ProjectGuid>{5A150155-B6C0-422C-92DD-4BF5612D1B69}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Twitter.DAL</RootNamespace>
@@ -30,8 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
@@ -40,6 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -52,10 +52,13 @@
     <Compile Include="Follow.cs">
       <DependentUpon>TwitterADO.tt</DependentUpon>
     </Compile>
+    <Compile Include="ITweetDAL.cs" />
+    <Compile Include="IUserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tweet.cs">
       <DependentUpon>TwitterADO.tt</DependentUpon>
     </Compile>
+    <Compile Include="TweetDALImpl.cs" />
     <Compile Include="TwitterADO.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,16 +77,15 @@
     <Compile Include="User.cs">
       <DependentUpon>TwitterADO.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="TwitterADO.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TwitterADO.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Compile Include="UserDALImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
+    <EntityDeploy Include="TwitterADO.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TwitterADO.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="TwitterADO.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TwitterADO.edmx</DependentUpon>

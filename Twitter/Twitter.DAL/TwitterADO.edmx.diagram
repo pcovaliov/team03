@@ -4,12 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d7063b4de84e40bb8b8df6ac92991896" Name="Diagram1">
-        <EntityTypeShape EntityType="twitterModel.Follow" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="twitterModel.Tweet" Width="1.5" PointX="3.25" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="twitterModel.User" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="twitterModel.FKFollowedUser" ManuallyRouted="false" />
-        <AssociationConnector Association="twitterModel.FKSubscriber" ManuallyRouted="false" />
+      <Diagram DiagramId="04c9d386d61b460fa2731d1319445860" Name="Diagram1">
+        <EntityTypeShape EntityType="twitterModel.Follow" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="twitterModel.Tweet" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="twitterModel.User" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

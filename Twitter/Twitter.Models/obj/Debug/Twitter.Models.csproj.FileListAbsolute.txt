@@ -1,0 +1,10 @@
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Models\bin\Debug\Twitter.Models.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Models\bin\Debug\Twitter.Models.pdb
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Models\obj\Debug\Twitter.Models.csprojResolveAssemblyReference.cache
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Models\obj\Debug\Twitter.Models.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.Models\obj\Debug\Twitter.Models.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Models\bin\Debug\Twitter.Models.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Models\bin\Debug\Twitter.Models.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Models\obj\Debug\Twitter.Models.csprojResolveAssemblyReference.cache
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Models\obj\Debug\Twitter.Models.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.Models\obj\Debug\Twitter.Models.pdb

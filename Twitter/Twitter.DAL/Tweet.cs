@@ -16,7 +16,7 @@ namespace Twitter.DAL
     {
         public int id_tweet { get; set; }
         public string descripton { get; set; }
-        public Nullable<int> id_user { get; set; }
-        public string created_on { get; set; }
+        public int id_user { get; set; }
+        public Nullable<System.DateTime> created_on { get; set; }
     }
 }

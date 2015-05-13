@@ -1,222 +1,78 @@
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.WEB.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.WEB.pdb
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Antlr3.Runtime.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\EntityFramework.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Microsoft.Web.Infrastructure.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Newtonsoft.Json.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Http.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Mvc.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Optimization.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Providers.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Razor.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.WebPages.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.BL.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\WebGrease.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.BL.pdb
-D:\ASP.Net\Twitter\Twitter.WEB\bin\EntityFramework.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Newtonsoft.Json.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Http.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Mvc.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Razor.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.WebPages.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.xml
-D:\ASP.Net\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.csprojResolveAssemblyReference.cache
-D:\ASP.Net\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.dll
-D:\ASP.Net\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.pdb
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.Model.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.DAL.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.CRUD.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.Model.pdb
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.DAL.pdb
-D:\ASP.Net\Twitter\Twitter.WEB\bin\Twitter.CRUD.pdb
-D:\ASP.Net\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.xml
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Helpers.dll
-D:\ASP.Net\Twitter\Twitter.WEB\bin\System.Web.Helpers.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.WEB.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.WEB.pdb
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Antlr3.Runtime.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\EntityFramework.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Microsoft.Web.Infrastructure.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Newtonsoft.Json.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Helpers.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Http.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Mvc.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Optimization.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Providers.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Razor.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.BL.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.CRUD.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.Model.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\WebGrease.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.DAL.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.BL.pdb
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.Model.pdb
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\EntityFramework.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Helpers.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Newtonsoft.Json.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Http.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Mvc.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.Razor.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.xml
-D:\Project for Internship\team03\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.csprojResolveAssemblyReference.cache
-D:\Project for Internship\team03\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.dll
-D:\Project for Internship\team03\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.pdb
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.CRUD.pdb
-D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.DAL.pdb
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.WEB.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.WEB.pdb
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Antlr3.Runtime.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\EntityFramework.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Microsoft.Web.Infrastructure.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Newtonsoft.Json.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Helpers.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Http.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Mvc.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Optimization.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Providers.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Razor.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.WebPages.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.BL.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.CRUD.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.Model.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\WebGrease.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.DAL.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.BL.pdb
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.CRUD.pdb
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.Model.pdb
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\EntityFramework.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Helpers.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Newtonsoft.Json.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Http.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Mvc.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.Razor.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.WebPages.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\Twitter.DAL.pdb
-D:\C Sharp programs\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.csprojResolveAssemblyReference.cache
-D:\C Sharp programs\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.pdb
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\PagedList.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\PagedList.Mvc.dll
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\PagedList.xml
-D:\C Sharp programs\Twitter\Twitter.WEB\bin\PagedList.Mvc.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.WEB.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.WEB.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Antlr3.Runtime.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\EntityFramework.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Newtonsoft.Json.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\PagedList.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\PagedList.Mvc.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Helpers.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Http.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Mvc.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Optimization.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Providers.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Razor.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.WebPages.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.BL.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.CRUD.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.Model.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\WebGrease.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.DAL.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.BL.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.CRUD.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.Model.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\EntityFramework.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\PagedList.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\PagedList.Mvc.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Helpers.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Newtonsoft.Json.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Http.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Mvc.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.Razor.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.WebPages.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.xml
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\bin\Twitter.DAL.pdb
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.csprojResolveAssemblyReference.cache
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.dll
-C:\Users\vcudalb\Desktop\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.WEB.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.WEB.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Antlr3.Runtime.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\EntityFramework.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Microsoft.Web.Infrastructure.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Newtonsoft.Json.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\PagedList.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\PagedList.Mvc.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Helpers.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Http.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Mvc.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Optimization.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Providers.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Razor.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.BL.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.CRUD.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.Model.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\WebGrease.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.DAL.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.BL.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.CRUD.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.Model.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\EntityFramework.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\PagedList.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\PagedList.Mvc.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Helpers.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Newtonsoft.Json.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Http.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Mvc.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.Razor.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\Twitter.DAL.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.csprojResolveAssemblyReference.cache
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.dll
-D:\Project for internship\team03\team03\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.pdb
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\Twitter.WEB.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\Twitter.WEB.pdb
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\Antlr3.Runtime.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\EntityFramework.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\Microsoft.Web.Infrastructure.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\Newtonsoft.Json.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Http.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Mvc.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Optimization.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Providers.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Razor.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.WebPages.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\WebGrease.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\EntityFramework.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\Newtonsoft.Json.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Http.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Mvc.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.Razor.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.WebPages.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.xml
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.csprojResolveAssemblyReference.cache
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.pdb
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\Twitter.Services.dll
+D:\Work for Twitter\VersionDI\Twitter\Twitter.WEB\bin\Twitter.Services.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.WEB.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.WEB.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Antlr3.Runtime.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\EntityFramework.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Microsoft.Web.Infrastructure.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Newtonsoft.Json.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Http.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Mvc.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Optimization.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Providers.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Razor.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.WebPages.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.Services.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\WebGrease.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.Services.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\EntityFramework.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\EntityFramework.SqlServer.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Newtonsoft.Json.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Net.Http.Formatting.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Http.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Http.WebHost.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Mvc.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.Razor.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.WebPages.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.WebPages.Deployment.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\System.Web.WebPages.Razor.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.csprojResolveAssemblyReference.cache
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.DAL.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.DAL.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Autofac.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Autofac.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.Models.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.Models.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.Convert.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.Convert.pdb
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Autofac.Integration.Mvc.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Autofac.Integration.Mvc.xml

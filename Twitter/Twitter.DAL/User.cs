@@ -14,20 +14,11 @@ namespace Twitter.DAL
     
     public partial class User
     {
-        public User()
-        {
-            this.Follows = new HashSet<Follow>();
-            this.Follows1 = new HashSet<Follow>();
-        }
-    
         public int id_user { get; set; }
         public string first_name { get; set; }
         public string last_name { get; set; }
         public string email { get; set; }
         public string avatar { get; set; }
         public string userPassword { get; set; }
-    
-        public virtual ICollection<Follow> Follows { get; set; }
-        public virtual ICollection<Follow> Follows1 { get; set; }
     }
 }
