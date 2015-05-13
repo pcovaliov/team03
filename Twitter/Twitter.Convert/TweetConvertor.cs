@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,20 +23,14 @@ namespace Twitter.Convert
 
         public static TweetModel ConvertTweetToModel(Tweet convertedTweet)
         {
-            TweetModel currentTweet = new TweetModel();
-            currentTweet.Descripton = convertedTweet.descripton;
-            //currentTweet.IdUser = convertedTweet.id_user ?? 1;
-            //currentTweet.CreatedOn = convertedTweet.created_on;
-            currentTweet.IdUser = convertedTweet.id_user;
+            TweetModel currentTweet = new TweetModel()
+            {
 
-            currentTweet.CreatedOn.AddYears(convertedTweet.created_on.Value.Year);
-            currentTweet.CreatedOn.AddMonths(convertedTweet.created_on.Value.Month);
-            currentTweet.CreatedOn.AddDays(convertedTweet.created_on.Value.Day);
-            currentTweet.CreatedOn.AddHours(convertedTweet.created_on.Value.Hour);
-            currentTweet.CreatedOn.AddMinutes(convertedTweet.created_on.Value.Minute);
-            currentTweet.CreatedOn.AddSeconds(convertedTweet.created_on.Value.Second);
-
-            currentTweet.IdTweet = convertedTweet.id_tweet;
+                Descripton = convertedTweet.descripton,
+                IdUser = convertedTweet.id_user,
+                CreatedOn = DateTime.Parse(convertedTweet.created_on.ToString()),
+                IdTweet = convertedTweet.id_tweet
+            };
             return currentTweet;
         }
     }

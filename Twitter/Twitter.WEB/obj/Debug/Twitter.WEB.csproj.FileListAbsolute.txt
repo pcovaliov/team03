@@ -76,3 +76,7 @@ D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.Convert.dll
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Twitter.Convert.pdb
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Autofac.Integration.Mvc.dll
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Autofac.Integration.Mvc.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\PagedList.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\PagedList.Mvc.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\PagedList.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\PagedList.Mvc.xml

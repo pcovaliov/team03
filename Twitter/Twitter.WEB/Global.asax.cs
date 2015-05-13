@@ -24,8 +24,6 @@ namespace Twitter.WEB
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             DependecyInjectionConfig.Configure();
-            
-
         }
     }
 }

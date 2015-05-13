@@ -1,0 +1,106 @@
+﻿@model Twitter.Models.UserModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<body style="background-color:#E5E5E5;">
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+<fieldset style="
+width:500px; 
+margin:auto;
+text-align:center;
+background: #eeeeee; /* Old browsers */
+background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */ ">
+
+
+        <div class="editor-field">
+            @Html.HiddenFor(model => model.IdUser)
+        </div>    
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+        </div>
+                @Html.ValidationMessageFor(model => model.FirstName)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+        </div>
+                @Html.ValidationMessageFor(model => model.LastName)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+
+        </div>
+                @Html.ValidationMessageFor(model => model.Email)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserPassword)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserPassword)
+     
+        </div>
+           @Html.ValidationMessageFor(model => model.UserPassword)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ConfirmPassword)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ConfirmPassword)
+            
+        </div>
+    @Html.ValidationMessageFor(model => model.ConfirmPassword)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Avatar)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Avatar)
+         
+        </div>
+       @Html.ValidationMessageFor(model => model.Avatar)
+
+  <br><br>
+  <div class="control-group">
+  <div class="controls">
+    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Save</button>
+  </div>
+
+<br>
+
+<div>
+    @Html.ActionLink("Back to List", "DisplayUsers")
+</div>
+
+</fieldset>
+}
+    </body>
+@section Scripts{
+ @Scripts.Render("~/bundles/jqueryval")
+}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Reflection;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Builder;
@@ -17,14 +18,12 @@ namespace Twitter.WEB.App_Start
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<UserDALImpl>().SingleInstance();
-            builder.RegisterType<TweetDALImpl>();
-            builder.RegisterType<UserServiceImpl>().SingleInstance();
-            builder.RegisterType<TweetServiceImpl>();
-            builder.Register<IUserDAL>(UserDAL => UserDAL.Resolve<UserDALImpl>()).SingleInstance();
-            builder.Register<ITweetDAL>(TweetDAL => TweetDAL.Resolve<TweetDALImpl>());
-            builder.Register<IUserService>(UserService => UserService.Resolve<UserServiceImpl>()).SingleInstance();
-            builder.Register<ITweetService>(TweetService => TweetService.Resolve<TweetServiceImpl>());
+            builder.RegisterControllers(Assembly.GetExecutingAssembly()).PropertiesAutowired();
+
+            builder.RegisterType<UserDAL>().As<IUserDAL>().SingleInstance().PropertiesAutowired();
+            builder.RegisterType<TweetDAL>().As<ITweetDAL>().SingleInstance().PropertiesAutowired();
+            builder.RegisterType<UserService>().As<IUserService>().SingleInstance().PropertiesAutowired();
+            builder.RegisterType<TweetService>().As<ITweetService>().SingleInstance().PropertiesAutowired();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

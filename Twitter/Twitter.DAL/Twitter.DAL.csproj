@@ -52,13 +52,13 @@
     <Compile Include="Follow.cs">
       <DependentUpon>TwitterADO.tt</DependentUpon>
     </Compile>
-    <Compile Include="ITweetDAL.cs" />
-    <Compile Include="IUserDAL.cs" />
+    <Compile Include="Interfaces\ITweetDAL.cs" />
+    <Compile Include="Interfaces\IUserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tweet.cs">
       <DependentUpon>TwitterADO.tt</DependentUpon>
     </Compile>
-    <Compile Include="TweetDALImpl.cs" />
+    <Compile Include="Implementation\TweetDAL.cs" />
     <Compile Include="TwitterADO.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,7 +77,7 @@
     <Compile Include="User.cs">
       <DependentUpon>TwitterADO.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserDALImpl.cs" />
+    <Compile Include="Implementation\UserDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
