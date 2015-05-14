@@ -12,3 +12,8 @@ D:\Project for internship\team03\team03\Twitter\Twitter.Models\bin\Debug\Twitter
 D:\Project for internship\team03\team03\Twitter\Twitter.Models\obj\Debug\Twitter.Models.csprojResolveAssemblyReference.cache
 D:\Project for internship\team03\team03\Twitter\Twitter.Models\obj\Debug\Twitter.Models.dll
 D:\Project for internship\team03\team03\Twitter\Twitter.Models\obj\Debug\Twitter.Models.pdb
+D:\Project for Internship\team03\Twitter\Twitter.Models\bin\Debug\Twitter.Models.dll
+D:\Project for Internship\team03\Twitter\Twitter.Models\bin\Debug\Twitter.Models.pdb
+D:\Project for Internship\team03\Twitter\Twitter.Models\obj\Debug\Twitter.Models.csprojResolveAssemblyReference.cache
+D:\Project for Internship\team03\Twitter\Twitter.Models\obj\Debug\Twitter.Models.dll
+D:\Project for Internship\team03\Twitter\Twitter.Models\obj\Debug\Twitter.Models.pdb
