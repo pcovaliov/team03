@@ -9,3 +9,14 @@ D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\bin\Debug\EntityFramework.x
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\obj\Debug\Twitter.Convert.dll
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\obj\Debug\Twitter.Convert.pdb
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.Convert\obj\Debug\Twitter.Convert.csprojResolveAssemblyReference.cache
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\bin\Debug\Twitter.Convert.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\bin\Debug\Twitter.Convert.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\bin\Debug\Twitter.DAL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\bin\Debug\Twitter.Models.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\bin\Debug\EntityFramework.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\bin\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\bin\Debug\Twitter.Models.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\bin\Debug\EntityFramework.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\obj\Debug\Twitter.Convert.csprojResolveAssemblyReference.cache
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\obj\Debug\Twitter.Convert.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Convert\obj\Debug\Twitter.Convert.pdb

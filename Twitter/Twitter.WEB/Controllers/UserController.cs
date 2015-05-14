@@ -68,7 +68,7 @@ namespace Twitter.WEB.Controllers
             int pageSize = 10;
             int pageNumber = (page ?? 1);
             List<UserModel> allUsers = new List<UserModel>();
-            allUsers = UserService.SelectUsers().OrderBy(currentUser => currentUser.IdUser).ToList();
+            allUsers = UserService.SelectUsers().OrderByDescending(currentUser => currentUser.IdUser).ToList();
             return View("DisplayUsers", allUsers.ToPagedList(pageNumber, pageSize));
         }
 

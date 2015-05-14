@@ -22,3 +22,16 @@ D:\Work for Twitter\WorkCopy\Twitter\Twitter.Services\obj\Debug\Twitter.Services
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.Services\obj\Debug\Twitter.Services.pdb
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.Services\bin\Debug\Twitter.Convert.dll
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.Services\bin\Debug\Twitter.Convert.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\Twitter.Services.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\Twitter.Services.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\Twitter.Convert.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\Twitter.DAL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\Twitter.Models.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\EntityFramework.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\Twitter.Convert.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\Twitter.Models.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\EntityFramework.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\obj\Debug\Twitter.Services.csprojResolveAssemblyReference.cache
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\obj\Debug\Twitter.Services.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\obj\Debug\Twitter.Services.pdb

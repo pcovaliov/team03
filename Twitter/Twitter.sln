@@ -9,9 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.WEB", "Twitter.WEB\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Models", "Twitter.Models\Twitter.Models.csproj", "{8037D771-CF2F-4FD8-B12E-BED54394DDE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Test", "Twitter.Test\Twitter.Test.csproj", "{5777041D-8323-40BE-8B3C-6E73D1C1F875}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Convert", "Twitter.Convert\Twitter.Convert.csproj", "{95652AC3-E2C8-49DB-8FB7-AA1CB8FE517A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter.Test", "Twitter.Test\Twitter.Test.csproj", "{0720B775-3B72-4E03-9374-E2FAA6823F37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A2D20342-5435-41C7-B946-E6D62F8ABA05}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,14 +40,14 @@ Global
 		{8037D771-CF2F-4FD8-B12E-BED54394DDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8037D771-CF2F-4FD8-B12E-BED54394DDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8037D771-CF2F-4FD8-B12E-BED54394DDE9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5777041D-8323-40BE-8B3C-6E73D1C1F875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5777041D-8323-40BE-8B3C-6E73D1C1F875}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5777041D-8323-40BE-8B3C-6E73D1C1F875}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5777041D-8323-40BE-8B3C-6E73D1C1F875}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95652AC3-E2C8-49DB-8FB7-AA1CB8FE517A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95652AC3-E2C8-49DB-8FB7-AA1CB8FE517A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95652AC3-E2C8-49DB-8FB7-AA1CB8FE517A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95652AC3-E2C8-49DB-8FB7-AA1CB8FE517A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0720B775-3B72-4E03-9374-E2FAA6823F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0720B775-3B72-4E03-9374-E2FAA6823F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0720B775-3B72-4E03-9374-E2FAA6823F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0720B775-3B72-4E03-9374-E2FAA6823F37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,3 +17,13 @@ D:\Work for Twitter\WorkCopy\Twitter\Twitter.DAL\bin\Debug\EntityFramework.xml
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.DAL\bin\Debug\EntityFramework.SqlServer.xml
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.dll
 D:\Work for Twitter\WorkCopy\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.dll.config
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.csprojResolveAssemblyReference.cache
