@@ -33,13 +33,13 @@ namespace Twitter.WEB.Controllers
             {
                 if (UserService.Register(CurrentUser))
                 {
-                    log.Info("Registrated succesfuly");
+                    log.Info("Registrated succesfuly " + CurrentUser.Email);
                     ViewBag.Message = "Successfully Registration Done.";
                     return RedirectToAction("Login");
                 }
                 else
                 {
-                    log.Info("Registration failed");
+                    log.Info("Registration failed " + CurrentUser.Email);
                     ViewBag.Message = "Registration Failed, this mail is already used.";
                 }
 
