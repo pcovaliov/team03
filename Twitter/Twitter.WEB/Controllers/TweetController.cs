@@ -7,6 +7,7 @@ using Twitter.Services;
 using Twitter.Models;
 using PagedList;
 using PagedList.Mvc;
+using log4net;
 
 namespace Twitter.WEB.Controllers
 {
@@ -16,6 +17,8 @@ namespace Twitter.WEB.Controllers
         public ITweetService TweetService { get; set; }
         #endregion
 
+        private static log4net.ILog Log { get; set; }
+        ILog log = log4net.LogManager.GetLogger(typeof(TweetService));
         public ActionResult Message()
         {
             return View();
@@ -28,6 +31,7 @@ namespace Twitter.WEB.Controllers
             int idUser = int.Parse(Session["LogedId"].ToString());
             if (TweetService.Message(CurrentTweet, idUser))
             {
+                log.Info("Message added successfuly");
                 ViewBag.Message = "Your message  was added successfuly";
             }
             else
@@ -45,6 +49,7 @@ namespace Twitter.WEB.Controllers
             int idUser = int.Parse(Session["LogedId"].ToString());
             List<TweetModel> allTweets = new List<TweetModel>();
             allTweets = TweetService.SelectTweets(idUser).OrderByDescending(currentTweet => currentTweet.CreatedOn).ToList();
+            log.Info("Displayed tweets Succesfuly");
             return PartialView("_DisplayTweets", allTweets.ToPagedList(pageNumber, pageSize));
         }
 
@@ -52,6 +57,7 @@ namespace Twitter.WEB.Controllers
         {
             if (TweetService.DeleteTweet(item))
             {
+                log.Info("Deleted tweets succesfuly");
                 return RedirectToAction("Message");
             }
             else

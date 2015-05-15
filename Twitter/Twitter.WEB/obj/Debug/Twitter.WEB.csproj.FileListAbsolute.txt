@@ -176,3 +176,5 @@ D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\Twitter.Convert.pdb
 D:\Project for Internship\team03\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.csprojResolveAssemblyReference.cache
 D:\Project for Internship\team03\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.dll
 D:\Project for Internship\team03\Twitter\Twitter.WEB\obj\Debug\Twitter.WEB.pdb
+D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\log4net.dll
+D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\log4net.xml

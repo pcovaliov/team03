@@ -44,3 +44,5 @@ D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Convert.
 D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.pdb
 D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Models.pdb
 D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Services.pdb
+D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\log4net.dll
+D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\log4net.xml

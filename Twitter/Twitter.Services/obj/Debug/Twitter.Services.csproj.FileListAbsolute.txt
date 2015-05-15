@@ -48,3 +48,5 @@ D:\Project for Internship\team03\Twitter\Twitter.Services\bin\Debug\EntityFramew
 D:\Project for Internship\team03\Twitter\Twitter.Services\obj\Debug\Twitter.Services.csprojResolveAssemblyReference.cache
 D:\Project for Internship\team03\Twitter\Twitter.Services\obj\Debug\Twitter.Services.dll
 D:\Project for Internship\team03\Twitter\Twitter.Services\obj\Debug\Twitter.Services.pdb
+D:\Project for Internship\team03\Twitter\Twitter.Services\bin\Debug\log4net.dll
+D:\Project for Internship\team03\Twitter\Twitter.Services\bin\Debug\log4net.xml

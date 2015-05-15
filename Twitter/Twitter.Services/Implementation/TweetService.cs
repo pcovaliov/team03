@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Twitter.Convert;
 using Twitter.Models;
 using Twitter.DAL;
+using log4net;
 
 namespace Twitter.Services
 {
@@ -14,6 +15,9 @@ namespace Twitter.Services
         #region Private
         public ITweetDAL TweetDal { get; set; }
         #endregion
+
+        private static log4net.ILog Log { get; set; }
+        ILog log = log4net.LogManager.GetLogger(typeof(TweetService));
 
         public List<TweetModel> SelectTweets(int idUser)
         {
@@ -27,29 +31,61 @@ namespace Twitter.Services
 
         public bool Message(TweetModel CurrentTweet, int idUser)
         {
-            if (TweetDal.AddTweet(TweetConvertor.ConvertTweetToDAL(CurrentTweet, idUser)))
+            try
             {
-                return true;
+                if (TweetDal.AddTweet(TweetConvertor.ConvertTweetToDAL(CurrentTweet, idUser)))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return false;
+                log.Error("Error in adding tweet", ex);
+                throw;
             }
         }
 
         public bool DeleteTweet(int idTweet)
         {
-            return TweetDal.DeleteTweet(idTweet);
+            try
+            {
+                return TweetDal.DeleteTweet(idTweet);
+            }
+            catch (Exception ex)
+            { 
+                log.Error("Error in deleting tweet!", ex);
+                throw;
+            }
         }
 
         public TweetModel GetTweet(int idTweet) 
         {
-            return TweetConvertor.ConvertTweetToModel(TweetDal.GetTweetById(idTweet));
+            try
+            {
+                return TweetConvertor.ConvertTweetToModel(TweetDal.GetTweetById(idTweet));
+            }
+            catch (Exception ex)
+            {
+                log.Error("Cannot get tweet by ID", ex);
+                throw;
+            }
         }
 
         public bool EditTweet(TweetModel currentTweet, int idUser)
         {
-            return TweetDal.ChangeTweet(TweetConvertor.ConvertTweetToDAL(currentTweet, idUser));
+            try
+            {
+                return TweetDal.ChangeTweet(TweetConvertor.ConvertTweetToDAL(currentTweet, idUser));
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error in editing tweets!", ex);
+                throw;
+            }
         }
     }
 }

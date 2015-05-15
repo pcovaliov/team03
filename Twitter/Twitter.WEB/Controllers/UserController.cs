@@ -7,11 +7,14 @@ using Twitter.Services;
 using Twitter.Models;
 using PagedList;
 using PagedList.Mvc;
+using log4net;
 
 namespace Twitter.WEB.Controllers
 {
     public class UserController : Controller
     {
+        private static log4net.ILog Log { get; set; }
+        ILog log = log4net.LogManager.GetLogger(typeof(UserController));
         #region Private
         public IUserService UserService { get; set; }
         #endregion
@@ -25,19 +28,26 @@ namespace Twitter.WEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(UserModel CurrentUser)
         {
+
             if (ModelState.IsValid)
             {
-                 if (UserService.Register(CurrentUser))
+                if (UserService.Register(CurrentUser))
                 {
+                    log.Info("Registrated succesfuly");
                     ViewBag.Message = "Successfully Registration Done.";
                     return RedirectToAction("Login");
                 }
                 else
                 {
+                    log.Info("Registration failed");
                     ViewBag.Message = "Registration Failed, this mail is already used.";
                 }
+
             }
+
+
             return View(CurrentUser);
+
         }
 
         public ActionResult Login()
@@ -49,17 +59,23 @@ namespace Twitter.WEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserModel CurrentUser)
         {
+
+
             int userLogedId = UserService.Login(CurrentUser);
             if (userLogedId > 0)
             {
                 this.Session["LogedId"] = userLogedId.ToString();
                 this.Session["LogedName"] = CurrentUser.Email.ToString();
+                log.Info("Succesful loged");
                 return RedirectToAction("DisplayUsers");
             }
             else
             {
+                log.Info("Login failed");
                 ViewBag.Message = "Login Failed.";
             }
+
+
             return View();
         }
 
@@ -68,7 +84,8 @@ namespace Twitter.WEB.Controllers
             int pageSize = 10;
             int pageNumber = (page ?? 1);
             List<UserModel> allUsers = new List<UserModel>();
-            allUsers = UserService.SelectUsers().OrderByDescending(currentUser => currentUser.IdUser).ToList();
+            allUsers = UserService.SelectUsers().OrderBy(currentUser => currentUser.IdUser).ToList();
+            log.Info("Displayed users succesfuly");
             return View("DisplayUsers", allUsers.ToPagedList(pageNumber, pageSize));
         }
 
@@ -84,13 +101,14 @@ namespace Twitter.WEB.Controllers
             {
                 return View();
             }
-
         }
+
         [HttpPost]
         public ActionResult Edit(UserModel currentUser)
         {
             if (UserService.EditUser(currentUser))
             {
+                log.Info("User edited succesfuly");
                 return RedirectToAction("DisplayUsers");
             }
             else
@@ -103,6 +121,7 @@ namespace Twitter.WEB.Controllers
         {
             if (UserService.DeleteUser(item))
             {
+                log.Info("User deleted succesfuly");
                 return RedirectToAction("DisplayUsers");
             }
             else

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Twitter.Convert;
 using Twitter.Models;
 using Twitter.DAL;
+using log4net;
 
 namespace Twitter.Services
 {
@@ -15,33 +16,46 @@ namespace Twitter.Services
         public IUserDAL UserDal { get; set; }
         #endregion
 
+        private static log4net.ILog Log { get; set; }
+        ILog log = log4net.LogManager.GetLogger(typeof(UserService));
+
         public bool Register(UserModel CurrentUser)
         {
             try
             {
                 return UserDal.AddUser(UserConvertor.ConvertToDAL(CurrentUser));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                log.Error("Error in registration!", ex);
                 throw;
             }
+
         }
 
         public int Login(UserModel UserToLogin)
         {
-            var userList =
-                      UserDal.ReadUsers().FirstOrDefault
-                      (currentUser => currentUser.email.Equals(UserToLogin.Email)
-                          &&
-                       currentUser.userPassword.Equals(UserToLogin.UserPassword)
-                          );
-            if (userList != null)
+            try
             {
-                return userList.id_user;
+                var userList =
+                          UserDal.ReadUsers().FirstOrDefault
+                          (currentUser => currentUser.email.Equals(UserToLogin.Email)
+                              &&
+                           currentUser.userPassword.Equals(UserToLogin.UserPassword)
+                              );
+                if (userList != null)
+                {
+                    return userList.id_user;
+                }
+                else
+                {
+                    return 0;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return 0;
+                log.Error("Error in Login!", ex);
+                throw;
             }
         }
 
@@ -57,17 +71,41 @@ namespace Twitter.Services
 
         public UserModel GetUser(int idUser)
         {
-            return UserConvertor.ConvertToModel(UserDal.GetUserById(idUser));
+            try
+            {
+                return UserConvertor.ConvertToModel(UserDal.GetUserById(idUser));
+            }
+            catch (Exception ex)
+            {
+                log.Error("Failed to get user", ex);
+                throw;
+            }
         }
 
         public bool EditUser(UserModel currentUser)
         {
-            return UserDal.ChangeUser(UserConvertor.ConvertToDAL(currentUser));
+            try
+            {
+                return UserDal.ChangeUser(UserConvertor.ConvertToDAL(currentUser));
+            }
+            catch (Exception ex)
+            {
+                log.Error("Failed to edit user", ex);
+                throw;
+            }
         }
 
         public bool DeleteUser(int idUser)
         {
-            return UserDal.DeleteUser(idUser);
+            try
+            {
+                return UserDal.DeleteUser(idUser);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Failed to delete user", ex);
+                throw;
+            }
 
         }
     }
