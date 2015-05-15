@@ -31,7 +31,7 @@ namespace Twitter.WEB.Controllers
             int idUser = int.Parse(Session["LogedId"].ToString());
             if (TweetService.Message(CurrentTweet, idUser))
             {
-                log.Info("Message added successfuly");
+                log.Info("Message added successfuly "+CurrentTweet.IdTweet +" - IDUser - "+idUser );
                 ViewBag.Message = "Your message  was added successfuly";
             }
             else
@@ -57,7 +57,7 @@ namespace Twitter.WEB.Controllers
         {
             if (TweetService.DeleteTweet(item))
             {
-                log.Info("Deleted tweets succesfuly");
+                log.Info("Deleted tweets succesfuly, id="+item);
                 return RedirectToAction("Message");
             }
             else
@@ -87,6 +87,7 @@ namespace Twitter.WEB.Controllers
             currentTweet.IdUser = idCurrentUser;
             if (TweetService.EditTweet(currentTweet,idCurrentUser))
             {
+                log.Info("Tweet edited succesfuly " + currentTweet.IdTweet + " - IDUser - " + idCurrentUser);
                 return RedirectToAction("Message");
             }
             else

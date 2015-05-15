@@ -66,12 +66,12 @@ namespace Twitter.WEB.Controllers
             {
                 this.Session["LogedId"] = userLogedId.ToString();
                 this.Session["LogedName"] = CurrentUser.Email.ToString();
-                log.Info("Succesful loged");
+                log.Info("Succesful loged "+CurrentUser.Email);
                 return RedirectToAction("DisplayUsers");
             }
             else
             {
-                log.Info("Login failed");
+                log.Info("Login failed "+CurrentUser.Email);
                 ViewBag.Message = "Login Failed.";
             }
 
@@ -108,7 +108,7 @@ namespace Twitter.WEB.Controllers
         {
             if (UserService.EditUser(currentUser))
             {
-                log.Info("User edited succesfuly");
+                log.Info("User edited succesfuly "+currentUser.Email);
                 return RedirectToAction("DisplayUsers");
             }
             else
@@ -121,7 +121,7 @@ namespace Twitter.WEB.Controllers
         {
             if (UserService.DeleteUser(item))
             {
-                log.Info("User deleted succesfuly");
+                log.Info("User deleted succesfuly, id="+item);
                 return RedirectToAction("DisplayUsers");
             }
             else
