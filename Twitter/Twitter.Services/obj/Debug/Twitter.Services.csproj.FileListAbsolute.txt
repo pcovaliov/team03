@@ -50,3 +50,5 @@ D:\Project for Internship\team03\Twitter\Twitter.Services\obj\Debug\Twitter.Serv
 D:\Project for Internship\team03\Twitter\Twitter.Services\obj\Debug\Twitter.Services.pdb
 D:\Project for Internship\team03\Twitter\Twitter.Services\bin\Debug\log4net.dll
 D:\Project for Internship\team03\Twitter\Twitter.Services\bin\Debug\log4net.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\log4net.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Services\bin\Debug\log4net.xml

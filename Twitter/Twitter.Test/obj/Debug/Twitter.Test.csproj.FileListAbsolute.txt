@@ -9,9 +9,7 @@ D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\WebDriver
 D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\WebDriver.Support.dll
 D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\EntityFramework.xml
 D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\EntityFramework.SqlServer.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Selenium.WebDriverBackedSelenium.pdb
 D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Selenium.WebDriverBackedSelenium.xml
-D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\ThoughtWorks.Selenium.Core.pdb
 D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\ThoughtWorks.Selenium.Core.xml
 D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\WebDriver.xml
 D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\WebDriver.Support.xml
@@ -46,3 +44,15 @@ D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Models.p
 D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Services.pdb
 D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\log4net.dll
 D:\Project for Internship\team03\Twitter\Twitter.Test\bin\Debug\log4net.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Moq.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Convert.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Models.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Services.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\log4net.dll
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Convert.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.DAL.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Models.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Twitter.Services.pdb
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\Moq.xml
+D:\Project for internship\team03\team03\Twitter\Twitter.Test\bin\Debug\log4net.xml

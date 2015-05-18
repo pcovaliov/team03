@@ -8,9 +8,11 @@ using Twitter.Models;
 using PagedList;
 using PagedList.Mvc;
 using log4net;
+using System.Web.Security;
 
 namespace Twitter.WEB.Controllers
 {
+    
     public class TweetController : Controller
     {
         #region Private
@@ -25,7 +27,7 @@ namespace Twitter.WEB.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Message(TweetModel CurrentTweet)
         {
             int idUser = int.Parse(Session["LogedId"].ToString());
@@ -41,7 +43,7 @@ namespace Twitter.WEB.Controllers
 
             return View();
         }
-
+        [Authorize]
         public ActionResult DisplayTweets(int? page = 1)
         {
             int pageSize = 25;
@@ -52,7 +54,7 @@ namespace Twitter.WEB.Controllers
             log.Info("Displayed tweets Succesfuly");
             return PartialView("_DisplayTweets", allTweets.ToPagedList(pageNumber, pageSize));
         }
-
+        [Authorize]
         public ActionResult Delete(int item)
         {
             if (TweetService.DeleteTweet(item))
@@ -67,6 +69,7 @@ namespace Twitter.WEB.Controllers
 
         }
         [HttpGet]
+        [Authorize]
         public ActionResult Edit(int item)
         {
             var currentTweet = TweetService.GetTweet(item);
@@ -81,6 +84,7 @@ namespace Twitter.WEB.Controllers
 
         }
         [HttpPost]
+        [Authorize]
         public ActionResult Edit(TweetModel currentTweet)
         {   
             int idCurrentUser = int.Parse(Session["LogedId"].ToString());
@@ -94,7 +98,6 @@ namespace Twitter.WEB.Controllers
             {
                 return View(currentTweet);
             }
-        }
-
+        }     
     }
 }

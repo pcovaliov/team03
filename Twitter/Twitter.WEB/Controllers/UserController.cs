@@ -8,9 +8,11 @@ using Twitter.Models;
 using PagedList;
 using PagedList.Mvc;
 using log4net;
+using System.Web.Security;
 
 namespace Twitter.WEB.Controllers
 {
+    
     public class UserController : Controller
     {
         private static log4net.ILog Log { get; set; }
@@ -19,13 +21,14 @@ namespace Twitter.WEB.Controllers
         public IUserService UserService { get; set; }
         #endregion
 
+        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Register(UserModel CurrentUser)
         {
 
@@ -50,35 +53,33 @@ namespace Twitter.WEB.Controllers
 
         }
 
+        [AllowAnonymous]
         public ActionResult Login()
         {
             return View();
         }
 
+        [AllowAnonymous]
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Login(UserModel CurrentUser)
         {
-
-
-            int userLogedId = UserService.Login(CurrentUser);
-            if (userLogedId > 0)
-            {
-                this.Session["LogedId"] = userLogedId.ToString();
-                this.Session["LogedName"] = CurrentUser.Email.ToString();
-                log.Info("Succesful loged "+CurrentUser.Email);
-                return RedirectToAction("DisplayUsers");
-            }
-            else
-            {
-                log.Info("Login failed "+CurrentUser.Email);
-                ViewBag.Message = "Login Failed.";
-            }
-
-
+                int userLogedId = UserService.Login(CurrentUser);
+                if (userLogedId > 0)
+                {
+                    FormsAuthentication.SetAuthCookie(CurrentUser.ConfirmPassword, false);                   
+                    this.Session["LogedId"] = userLogedId.ToString();
+                    this.Session["LogedName"] = CurrentUser.Email.ToString();
+                    log.Info("Succesful loged " + CurrentUser.Email);
+                    return RedirectToAction("DisplayUsers");
+                }
+                else
+                {
+                    log.Info("Login failed " + CurrentUser.Email);
+                    ViewBag.Message = "Login Failed.";
+                }
             return View();
         }
-
+        [Authorize]
         public ActionResult DisplayUsers(int? page = 1)
         {
             int pageSize = 10;
@@ -88,8 +89,9 @@ namespace Twitter.WEB.Controllers
             log.Info("Displayed users succesfuly");
             return View("DisplayUsers", allUsers.ToPagedList(pageNumber, pageSize));
         }
-
+        
         [HttpGet]
+        [Authorize]
         public ActionResult Edit(int item)
         {
             var currentUser = UserService.GetUser(item);
@@ -104,11 +106,12 @@ namespace Twitter.WEB.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Edit(UserModel currentUser)
         {
             if (UserService.EditUser(currentUser))
             {
-                log.Info("User edited succesfuly "+currentUser.Email);
+                log.Info("User edited succesfuly " + currentUser.Email);
                 return RedirectToAction("DisplayUsers");
             }
             else
@@ -116,12 +119,12 @@ namespace Twitter.WEB.Controllers
                 return View(currentUser);
             }
         }
-
+        [Authorize]
         public ActionResult Delete(int item)
         {
             if (UserService.DeleteUser(item))
             {
-                log.Info("User deleted succesfuly, id="+item);
+                log.Info("User deleted succesfuly, id=" + item);
                 return RedirectToAction("DisplayUsers");
             }
             else
@@ -129,6 +132,12 @@ namespace Twitter.WEB.Controllers
                 return View();
             }
 
+        }
+        [Authorize]
+        public ActionResult SignOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login");
         }
 
     }
