@@ -69,6 +69,14 @@ namespace Twitter.WEB.Controllers
                     FormsAuthentication.SetAuthCookie(CurrentUser.ConfirmPassword, false);                   
                     this.Session["LogedId"] = userLogedId.ToString();
                     this.Session["LogedName"] = CurrentUser.Email.ToString();
+                    if (CurrentUser.Email == "admin@endava.com")
+                    {
+                        this.Session["AreAdmin"] = "Yes";
+                    }
+                    else
+                    {
+                        this.Session["AreAdmin"] = "No";
+                    }
                     log.Info("Succesful loged " + CurrentUser.Email);
                     return RedirectToAction("DisplayUsers");
                 }
@@ -85,7 +93,7 @@ namespace Twitter.WEB.Controllers
             int pageSize = 10;
             int pageNumber = (page ?? 1);
             List<UserModel> allUsers = new List<UserModel>();
-            allUsers = UserService.SelectUsers().OrderBy(currentUser => currentUser.IdUser).ToList();
+            allUsers = UserService.SelectUsers().OrderByDescending(currentUser => currentUser.IdUser).ToList();
             log.Info("Displayed users succesfuly");
             return View("DisplayUsers", allUsers.ToPagedList(pageNumber, pageSize));
         }

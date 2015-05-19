@@ -64,7 +64,10 @@ namespace Twitter.Services
             List<UserModel> usersList = new List<UserModel>();
             foreach (var currentUser in UserDal.ReadUsers())
             {
-                usersList.Add(UserConvertor.ConvertToModel(currentUser));
+                if (currentUser.email != "admin@endava.com")
+                {
+                    usersList.Add(UserConvertor.ConvertToModel(currentUser));
+                }
             }
             return usersList;
         }

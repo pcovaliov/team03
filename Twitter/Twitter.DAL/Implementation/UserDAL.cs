@@ -10,6 +10,7 @@ namespace Twitter.DAL
     {
         #region Private
         twitterEntities dbContext;
+        public ITweetDAL TweetDal { get; set; }
         #endregion
 
         public UserDAL() 
@@ -41,6 +42,11 @@ namespace Twitter.DAL
             dbContext.Users.FirstOrDefault(currentUser => currentUser.id_user.Equals(idUser));
             if (userDeleted != null)
             {
+                var usersTweets = TweetDal.ReadTweets(idUser).ToList();
+                foreach (var currentTweet in usersTweets) 
+                {
+                    TweetDal.DeleteTweet(currentTweet.id_tweet);
+                }
                 dbContext.Users.Remove(userDeleted);
                 dbContext.SaveChanges();
                 return true;
@@ -57,8 +63,8 @@ namespace Twitter.DAL
             var userList = new List<User>();
 
             foreach (var currentUser in dbContext.Users)
-            {
-                userList.Add(currentUser);
+            {            
+                    userList.Add(currentUser);
             }
 
             return userList;
