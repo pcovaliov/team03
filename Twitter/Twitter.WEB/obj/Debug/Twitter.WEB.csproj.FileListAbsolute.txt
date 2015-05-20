@@ -180,3 +180,7 @@ D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\log4net.dll
 D:\Project for Internship\team03\Twitter\Twitter.WEB\bin\log4net.xml
 D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\log4net.dll
 D:\Project for internship\team03\team03\Twitter\Twitter.WEB\bin\log4net.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Autofac.Integration.WebApi.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\log4net.dll
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\Autofac.Integration.WebApi.xml
+D:\Work for Twitter\WorkCopy\Twitter\Twitter.WEB\bin\log4net.xml
