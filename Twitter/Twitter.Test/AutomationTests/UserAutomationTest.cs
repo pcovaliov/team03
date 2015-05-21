@@ -35,10 +35,10 @@ namespace Twitter.Test
         {
             driver.Navigate().GoToUrl("http://localhost:61785/User/Login");
             element = driver.FindElement(By.Name("Email"));
-            element.SendKeys(Email.ToString());
+            element.SendKeys("admin@endava.com");
             element = driver.FindElement(By.Name("UserPassword"));
-            element.SendKeys(Password.ToString());
-            driver.FindElement(By.Name("singlebutton")).Click();
+            element.SendKeys("endavaAdmin");
+            driver.FindElement(By.Name("submitbutton")).Click();
             if (driver.Title == "DisplayUsers")
             {
                 return true;
@@ -65,7 +65,7 @@ namespace Twitter.Test
             element = driver.FindElement(By.Name("ConfirmPassword"));
             element.SendKeys(ConfirmPassword.ToString());
             //Act
-            driver.FindElement(By.Name("singlebutton")).Click();
+            driver.FindElement(By.Name("submitbutton")).Click();
             //Assert
             Assert.AreEqual("Login", driver.Title);
         }
@@ -81,6 +81,20 @@ namespace Twitter.Test
             }
             driver.FindElement(By.XPath("//tr[2]/td[4]/a[2]")).Click();
 
+        }
+        [TestMethod]
+        public void AddingNewTweetAndDeleteTweet()
+        {
+            if (Login())
+            {
+                driver.FindElement(By.XPath("//ul/li[4]/a/span")).Click();
+                element = driver.FindElement(By.Name("Descripton"));
+                element.SendKeys("HELLO");
+                driver.FindElement(By.Name("addbutton")).Click();
+                var tweet = driver.FindElement(By.XPath("/html/body/div/div[2]/div/table/tbody/tr[2]/td[1][contains(text(),'HELLO')]"));
+                Assert.AreEqual("HELLO", tweet.Text);
+                driver.FindElement(By.XPath("/html/body/div/div[2]/div/table/tbody/tr[2]/td[3]/a[2]")).Click();
+            }
         }
     }
 }

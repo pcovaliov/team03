@@ -50,14 +50,14 @@ namespace Twitter.Test.UnitTests
         //
         #endregion
 
-        [TestMethod]
-        public void Register_RegisterOfNewValidUser_True()
-        {
-            //arrange
-            //act
-            var expectedValue = UserService.Register(testUser);
-            //assert
-            Assert.AreEqual(true, expectedValue);
-        }
+        //[TestMethod]
+        //public void Register_RegisterOfNewValidUser_True()
+        //{
+        //    //arrange
+        //    //act
+        //    var expectedValue = UserService.Register(testUser);
+        //    //assert
+        //    Assert.AreEqual(true, expectedValue);
+        //}
     }
 }
