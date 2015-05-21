@@ -11,10 +11,10 @@ namespace Twitter.WEB.Controllers
 {
     public class RestWebServiceController : ApiController
     {
-        public IUserService UserService {get; set;}
+        public IUserService UserService { get; set; }
 
-        public System.Web.Http.Results.JsonResult<System.Collections.Generic.List<UserModel>> Get() 
-        { 
+        public System.Web.Http.Results.JsonResult<System.Collections.Generic.List<UserModel>> Get()
+        {
             var allUsers = UserService.SelectUsers();
             return Json(allUsers);
         }
