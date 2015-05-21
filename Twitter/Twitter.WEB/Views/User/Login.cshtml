@@ -1,83 +1,84 @@
 ﻿@model Twitter.Models.UserModel
+<link href="~/Content/Menu.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/AddButton.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/LoginForm.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/Validation.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/TextBox.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 @{
- ViewBag.Title = "Login";
+    ViewBag.Title = "Login";
 }
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<body style="background-color: #001933; width: 100%; height: 100%;">
+    <div style="width: 1000px; margin: auto; background-color:#aaa8a8; height: 100vh;">
+        <div id='cssmenu'>
+            <ul>
+                <li class='active'><a href="@Url.Action("Index", "Home")"><span>Home</span></a></li>
+                <li><a href="@Url.Action("Register", "User")"><span>Register</span></a></li>
+                <li><a href="@Url.Action("Login", "User")"><span>Login</span></a></li>
+                <li><a href="@Url.Action("Message", "Tweet")"><span>Tweets</span></a></li>
+                <li><a href="@Url.Action("DisplayUsers", "User")"><span>All Users</span></a></li>
+                <li><a href="@Url.Action("SignOut", "User")"><span>Sign Out</span></a></li>
+            </ul>
+        </div>
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<body style="background-color:#E5E5E5;">
+        <br>
+        <br>
 
-@using (Html.BeginForm("Login","User",FormMethod.Post))
-{   
- @Html.ValidationSummary(true)
-<fieldset style="
-width:500px; 
-margin:auto;
-text-align:center;
-background: #eeeeee; /* Old browsers */
-background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+        {   
+            @Html.ValidationSummary(true)
 
-       ">
- 
-    @if (ViewBag.Message == null)
-        {
-            <div style="border: solid 1px white">
-               <h4> Please complete login form.</h4>
+            <div style="width: 500px; height: 100%; margin: 0 auto; text-align: center; background-color:#E0E0E0 ; box-shadow: 10px 10px 5px #888888; border: 2px solid #456879;
+    border-radius: 10px;">
+
+                @if (ViewBag.Message == null)
+                {
+                    <div style="border: solid 1px #aaa8a8">
+                        <h4>Please complete login form!</h4>
+                    </div>
+                }
+                @if (ViewBag.Message == "Successfully Loged.")
+                {
+                    <div style="border: solid 1px green">
+                       <h4> @ViewBag.Message</h4>
+                    </div>
+                }
+                @if (ViewBag.Message == "Login Failed.")
+                {
+                    <div style="border: solid 5px red">
+                        <h4>@ViewBag.Message</h4>
+                    </div>
+                }
+                <div class="editor-label">
+                   <h4>Email</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Email, new {@class="textbox"})
+                </div>
+                @Html.ValidationMessageFor(model => model.Email)
+                <div class="editor-label">
+                   <h4>Password</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.PasswordFor(model => model.UserPassword, new {@class="textbox"})
+                </div>
+                @Html.ValidationMessageFor(model => model.UserPassword)
+                <br>
+                <br>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn orange">Sing In</button>
+                    </div>
+
+                    <br>
+                </div>
+
             </div>
         }
-        @if (ViewBag.Message == "Successfully Loged.")
-        {
-            <div style="border: solid 1px green">
-                @ViewBag.Message
-            </div>
-        }
-        @if (ViewBag.Message == "Login Failed.")
-        {
-            <div style="border: solid 1px red">
-                @ViewBag.Message
-            </div>
-        }
-<div class="editor-label">
-          @Html.LabelFor(model => model.Email)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Email, new { @class = "input-xlarge"})
-        </div>
-          @Html.ValidationMessageFor(model => model.Email)
- <div class="editor-label">
-            @Html.LabelFor(model => model.UserPassword)
-        </div>
-        <div class="editor-field">
-            @Html.PasswordFor(model => model.UserPassword)         
-        </div>
-       @Html.ValidationMessageFor(model => model.UserPassword)
-       <br>
-       <br>
-<div class="control-group">
-  <div class="controls">
-    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Sign In</button>
-  </div>
 
-<br>
-<div>
-    @Html.ActionLink("Sign Up", "Register")
-</div>
- </div> 
-         
-</fieldset>
-}
-    </body>
+    </div>
+</body>
 @section Scripts{
- @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryval")
 }
