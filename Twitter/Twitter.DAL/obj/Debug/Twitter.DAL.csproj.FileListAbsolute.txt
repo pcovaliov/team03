@@ -37,4 +37,3 @@ D:\Project for Internship\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.S
 D:\Project for Internship\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.csprojResolveAssemblyReference.cache
 D:\Project for Internship\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.dll
 D:\Project for Internship\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.pdb
-D:\Work for Twitter\WorkCopy\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.csprojResolveAssemblyReference.cache

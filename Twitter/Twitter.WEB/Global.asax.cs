@@ -18,13 +18,12 @@ namespace Twitter.WEB
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            DependecyInjectionConfig.Configure();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            
+            DependecyInjectionConfig.Configure();
             log4net.Config.XmlConfigurator.Configure();
         }
     }

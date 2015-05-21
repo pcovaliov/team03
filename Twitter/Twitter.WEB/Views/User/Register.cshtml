@@ -1,113 +1,110 @@
 ﻿@model Twitter.Models.UserModel
-
+<link href="~/Content/AddButton.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/Validation.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/Menu.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/TextBox.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "Register";
 }
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<body style="background-color: #001933; width: 100%; height: 100%;">
+    <div style="width: 1000px; margin: auto; background-color:#aaa8a8; height: 100vh;">
+        <div id='cssmenu'>
+            <ul>
+                <li class='active'><a href="@Url.Action("Index", "Home")"><span>Home</span></a></li>
+                <li><a href="@Url.Action("Register", "User")"><span>Register</span></a></li>
+                <li><a href="@Url.Action("Login", "User")"><span>Login</span></a></li>
+                <li><a href="@Url.Action("Message", "Tweet")"><span>Tweets</span></a></li>
+                <li><a href="@Url.Action("DisplayUsers", "User")"><span>All Users</span></a></li>
+                <li class='last'><a href="@Url.Action("SignOut", "User")"><span>Sign Out</span></a></li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true) 
+            <div style="width: 500px; height: 100%; margin: 0 auto; text-align: center; background-color:#E0E0E0 ; box-shadow: 10px 10px 5px #888888; border: 2px solid #456879;
+    border-radius: 10px;">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<body style="background-color:#E5E5E5;">
+                @if (ViewBag.Message == null)
+                {
+                    <div style="border: solid 1px #aaa8a8">
+                        <h4>Please complete register form.</h4>
+                    </div>
+                }
+                @if (ViewBag.Message == "Successfully Registration Done.")
+                {
+                    <div style="border: solid 1px green">
+                        <h4>@ViewBag.Message</h4>
+                    </div>
+                }
+                @if (ViewBag.Message == "Registration Failed, this mail is already used.")
+                {
+                    <div style="border: solid 5px red">
+                       <h4>@ViewBag.Message</h4>
+                    </div>
+                }
+                <div class="editor-label">
+                    <h4>First Name</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.FirstName, new {@class="textbox"})
+                </div>
+                @Html.ValidationMessageFor(model => model.FirstName)
+                <div class="editor-label">
+                    <h4>Last Name</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.LastName, new {@class="textbox"})
+                </div>
+                @Html.ValidationMessageFor(model => model.LastName)
 
-@using (Html.BeginForm()) {
-    @Html.ValidationSummary(true)  
- <fieldset style="
-width:500px; 
-margin:auto;
-text-align:center;
-background: #eeeeee; /* Old browsers */
-background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */ ">
+                <div class="editor-label">
+                    <h4>Email</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Email, new {@class="textbox"})
+                </div>
+                @Html.ValidationMessageFor(model => model.Email)
 
+                <div class="editor-label">
+                    <h4>Avatar</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Avatar, new {@class="textbox"})
+                </div>
+                @Html.ValidationMessageFor(model => model.Avatar)
+
+                <div class="editor-label">
+                    <h4>Password</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.PasswordFor(model => model.UserPassword, new {@class="textbox"})
+                </div>
+                @Html.ValidationMessageFor(model => model.UserPassword)
+
+                <div class="editor-label">
+                    <h4>Confirm Password</h4>
+                </div>
+                <div class="editor-field">
+                    @Html.PasswordFor(model => model.ConfirmPassword, new {@class="textbox"})
+                </div>
+                @Html.ValidationMessageFor(model => model.ConfirmPassword)
+                <br>
+                <br>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn orange">Add User</button>
+                    </div>
+
+                    <br>
+                </div>
+            </div>
        
-        @if (ViewBag.Message == null)
-        {
-            <div style="border: solid 1px white">
-               <h4> Please complete register form.</h4>
-            </div>
         }
-        @if (ViewBag.Message == "Successfully Registration Done.")
-        {
-            <div style="border: solid 1px green">
-                @ViewBag.Message
-            </div>
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
         }
-        @if (ViewBag.Message == "Registration Failed, this mail is already used.")
-        {
-            <div style="border: solid 1px red">
-                @ViewBag.Message
-            </div>
-        }
-        <div class="editor-label">
-            @Html.LabelFor(model => model.FirstName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.FirstName)           
-        </div>
-         @Html.ValidationMessageFor(model => model.FirstName)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.LastName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.LastName)     
-        </div>
-            @Html.ValidationMessageFor(model => model.LastName)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Email)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Email)
-        </div>
-         @Html.ValidationMessageFor(model => model.Email)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Avatar)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Avatar)
-        </div>
-        @Html.ValidationMessageFor(model => model.Avatar)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.UserPassword)
-        </div>
-        <div class="editor-field">
-            @Html.PasswordFor(model => model.UserPassword)
-        </div>
-        @Html.ValidationMessageFor(model => model.UserPassword)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ConfirmPassword)
-        </div>
-        <div class="editor-field">
-            @Html.PasswordFor(model => model.ConfirmPassword)
-        </div>
-          @Html.ValidationMessageFor(model => model.ConfirmPassword)
-<br><br>
-  <div class="control-group">
-  <div class="controls">
-    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Sign In</button>
-  </div>
-
-<br>
-    
-<div>
-    @Html.ActionLink("Sign In", "Login")
-</div>
- </fieldset>
-}
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    </div>
 </body>
