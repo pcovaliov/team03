@@ -13,11 +13,6 @@ namespace Twitter.WEB.Controllers
     {
         public IUserService UserService {get; set;}
 
-        //public List<UserModel> Get()
-        //{
-        //    return UserService.SelectUsers();
-        //}
-
         public System.Web.Http.Results.JsonResult<System.Collections.Generic.List<UserModel>> Get() 
         { 
             var allUsers = UserService.SelectUsers();
