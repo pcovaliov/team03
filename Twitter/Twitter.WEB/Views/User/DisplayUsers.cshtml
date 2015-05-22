@@ -58,7 +58,9 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Email)
                         </td>
-
+                        <td>
+                            <img src="~/Content/images/@Html.DisplayFor(modelItem => item.Avatar)" width="50px" height="50px">
+                            </td>
                         <td id="TableRow">
                             @if (Session["AreAdmin"].ToString() == "Yes")
                             {

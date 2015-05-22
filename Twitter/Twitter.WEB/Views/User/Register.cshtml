@@ -2,6 +2,7 @@
 <link href="~/Content/AddButton.css" rel="stylesheet" type="text/css" />
 <link href="~/Content/Validation.css" rel="stylesheet" type="text/css" />
 <link href="~/Content/Menu.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/SaveDeleteButton.css" rel="stylesheet" type="text/css" />
 <link href="~/Content/TextBox.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "Register";
@@ -20,7 +21,7 @@
         </div>
         <br>
         <br>
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("Register", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
             @Html.ValidationSummary(true) 
             <div style="width: 500px; height: 100%; margin: 0 auto; text-align: center; background-color:#E0E0E0 ; box-shadow: 10px 10px 5px #888888; border: 2px solid #456879;
@@ -68,13 +69,11 @@
                 </div>
                 @Html.ValidationMessageFor(model => model.Email)
 
-                <div class="editor-label">
-                    <h4>Avatar</h4>
-                </div>
+
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.Avatar, new {@class="textbox"})
+                    @Html.HiddenFor(model => model.Avatar, new {@class="textbox"})
                 </div>
-                @Html.ValidationMessageFor(model => model.Avatar)
+
 
                 <div class="editor-label">
                     <h4>Password</h4>
@@ -92,6 +91,8 @@
                 </div>
                 @Html.ValidationMessageFor(model => model.ConfirmPassword)
                 <br>
+               
+                 <input type="file" name="Avatar"/>
                 <br>
                 <div class="control-group">
                     <div class="controls">

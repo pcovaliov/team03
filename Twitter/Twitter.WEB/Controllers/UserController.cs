@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -29,11 +30,20 @@ namespace Twitter.WEB.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public ActionResult Register(UserModel CurrentUser)
+        public ActionResult Register(UserModel CurrentUser, HttpPostedFileBase Avatar)
         {
 
             if (ModelState.IsValid)
             {
+                if (Avatar != null && Avatar.ContentLength > 0)
+                {
+                    var fileName = Path.GetFileName(Avatar.FileName);
+
+                    var path = Path.Combine(Server.MapPath("~/Content/images"), fileName);
+                    Avatar.SaveAs(path);
+                    CurrentUser.Avatar = fileName;
+                }
+
                 if (UserService.Register(CurrentUser))
                 {
                     log.Info("Registrated succesfuly " + CurrentUser.Email);
