@@ -52,6 +52,8 @@
     <Compile Include="Follow.cs">
       <DependentUpon>TwitterADO.tt</DependentUpon>
     </Compile>
+    <Compile Include="Implementation\FollowDAL.cs" />
+    <Compile Include="Interfaces\IFollowDAL.cs" />
     <Compile Include="Interfaces\ITweetDAL.cs" />
     <Compile Include="Interfaces\IUserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

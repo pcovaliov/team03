@@ -10,7 +10,11 @@ using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using Autofac.Builder;
 using Twitter.DAL;
+using Twitter.DAL.Implementation;
+using Twitter.DAL.Interfaces;
 using Twitter.Services;
+using Twitter.Services.Implementation;
+using Twitter.Services.Interfaces;
 
 namespace Twitter.WEB.App_Start
 {
@@ -25,8 +29,10 @@ namespace Twitter.WEB.App_Start
 
             builder.RegisterType<UserDAL>().As<IUserDAL>().SingleInstance().PropertiesAutowired();
             builder.RegisterType<TweetDAL>().As<ITweetDAL>().SingleInstance().PropertiesAutowired();
+            builder.RegisterType<FollowDAL>().As<IFollowDAL>().SingleInstance().PropertiesAutowired();
             builder.RegisterType<UserService>().As<IUserService>().SingleInstance().PropertiesAutowired();
             builder.RegisterType<TweetService>().As<ITweetService>().SingleInstance().PropertiesAutowired();
+            builder.RegisterType<FollowService>().As<IFollowService>().SingleInstance().PropertiesAutowired();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

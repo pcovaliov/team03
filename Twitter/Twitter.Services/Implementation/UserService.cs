@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Twitter.Convert;
 using Twitter.Models;
 using Twitter.DAL;
-using Twitter.Convert;
 using log4net;
 
 namespace Twitter.Services
