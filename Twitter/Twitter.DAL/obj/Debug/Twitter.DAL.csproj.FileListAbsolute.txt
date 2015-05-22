@@ -26,7 +26,6 @@ D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFram
 D:\Project for internship\team03\team03\Twitter\Twitter.DAL\bin\Debug\EntityFramework.SqlServer.xml
 D:\Project for internship\team03\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.dll
 D:\Project for internship\team03\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.pdb
-D:\Project for internship\team03\team03\Twitter\Twitter.DAL\obj\Debug\Twitter.DAL.csprojResolveAssemblyReference.cache
 D:\Project for Internship\team03\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.dll.config
 D:\Project for Internship\team03\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.dll
 D:\Project for Internship\team03\Twitter\Twitter.DAL\bin\Debug\Twitter.DAL.pdb

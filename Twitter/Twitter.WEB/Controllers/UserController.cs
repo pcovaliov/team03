@@ -13,7 +13,7 @@ using System.Web.Security;
 
 namespace Twitter.WEB.Controllers
 {
-    
+
     public class UserController : Controller
     {
         private static log4net.ILog Log { get; set; }
@@ -38,29 +38,28 @@ namespace Twitter.WEB.Controllers
                 if (Avatar != null && Avatar.ContentLength > 0)
                 {
                     var fileName = Path.GetFileName(Avatar.FileName);
+                    var fileExtension = Path.GetExtension(fileName);
+                    if ((fileExtension == ".jpeg") || (fileExtension == ".gif") || (fileExtension == ".png") || (fileExtension == ".jpg"))
+                    {
 
-                    var path = Path.Combine(Server.MapPath("~/Content/images"), fileName);
-                    Avatar.SaveAs(path);
-                    CurrentUser.Avatar = fileName;
+                        var path = Path.Combine(Server.MapPath("~/Content/images"), fileName);
+                        Avatar.SaveAs(path);
+                        CurrentUser.Avatar = fileName;
+                        if (UserService.Register(CurrentUser))
+                        {
+                            log.Info("Registrated succesfuly " + CurrentUser.Email);
+                            ViewBag.Message = "Successfully Registration Done.";
+                            return RedirectToAction("Login");
+                        }
+                        else
+                        {
+                            log.Info("Registration failed " + CurrentUser.Email);
+                            ViewBag.Message = "Registration Failed, this mail is already used.";
+                        }
+                    }
                 }
-
-                if (UserService.Register(CurrentUser))
-                {
-                    log.Info("Registrated succesfuly " + CurrentUser.Email);
-                    ViewBag.Message = "Successfully Registration Done.";
-                    return RedirectToAction("Login");
-                }
-                else
-                {
-                    log.Info("Registration failed " + CurrentUser.Email);
-                    ViewBag.Message = "Registration Failed, this mail is already used.";
-                }
-
             }
-
-
             return View(CurrentUser);
-
         }
 
         [AllowAnonymous]
@@ -73,28 +72,29 @@ namespace Twitter.WEB.Controllers
         [HttpPost]
         public ActionResult Login(UserModel CurrentUser)
         {
-                int userLogedId = UserService.Login(CurrentUser);
-                if (userLogedId > 0)
+            var userLoged = UserService.Login(CurrentUser);
+            if (userLoged != null)
+            {
+                FormsAuthentication.SetAuthCookie(CurrentUser.UserPassword, false);
+                this.Session["LogedId"] = userLoged.IdUser.ToString();
+                this.Session["LogedName"] = userLoged.Email.ToString();
+                this.Session["Avatar"] = userLoged.Avatar.ToString();
+                if (CurrentUser.Email == "admin@endava.com")
                 {
-                    FormsAuthentication.SetAuthCookie(CurrentUser.ConfirmPassword, false);                   
-                    this.Session["LogedId"] = userLogedId.ToString();
-                    this.Session["LogedName"] = CurrentUser.Email.ToString();
-                    if (CurrentUser.Email == "admin@endava.com")
-                    {
-                        this.Session["AreAdmin"] = "Yes";
-                    }
-                    else
-                    {
-                        this.Session["AreAdmin"] = "No";
-                    }
-                    log.Info("Succesful loged " + CurrentUser.Email);
-                    return RedirectToAction("DisplayUsers");
+                    this.Session["AreAdmin"] = "Yes";
                 }
                 else
                 {
-                    log.Info("Login failed " + CurrentUser.Email);
-                    ViewBag.Message = "Login Failed.";
+                    this.Session["AreAdmin"] = "No";
                 }
+                log.Info("Succesful loged " + CurrentUser.Email);
+                return RedirectToAction("DisplayUsers");
+            }
+            else
+            {
+                log.Info("Login failed " + CurrentUser.Email);
+                ViewBag.Message = "Login Failed.";
+            }
             return View();
         }
         [Authorize]
@@ -107,7 +107,7 @@ namespace Twitter.WEB.Controllers
             log.Info("Displayed users succesfuly");
             return View("DisplayUsers", allUsers.ToPagedList(pageNumber, pageSize));
         }
-        
+
         [HttpGet]
         [Authorize]
         public ActionResult Edit(int item)

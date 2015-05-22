@@ -9,16 +9,16 @@
     ViewBag.Title = "Message";
 }
 <body style="background-color: #001933; width: 100%; height: 100%;">
-    <div style="width: 1000px; margin: auto; background-color:#E0E0E0; height: 100vh;">
+    <div style="width: 1000px; margin: auto; background-color:#E0E0E0; height: auto;">
         <div id='cssmenu'>
             <ul>
                 <li class='active'><a href="@Url.Action("Index", "Home")"><span>Home</span></a></li>
                 <li><a href="@Url.Action("Register", "User")"><span>Register</span></a></li>
-                <li><a href="@Url.Action("Login", "User")"><span>Login</span></a></li>
                 <li><a href="@Url.Action("Message", "Tweet")"><span>Tweets</span></a></li>
                 <li><a href="@Url.Action("DisplayUsers", "User")"><span>All Users</span></a></li>
                 <li class='last'><a href="@Url.Action("SignOut", "User")"><span>Sign Out</span></a></li>
                 <li>Hello, @Session["LogedName"].ToString()</li>
+                <li> <img src="~/Content/images/@Session["Avatar"].ToString()" width="50px" height="50px"> </li>
             </ul>
         </div>
         <br>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="control-group">
                     <div class="controls">
-                        <button type="submit" class="button add">Add Tweet</button>
+                        <button type="submit" class="button add" name="addbutton">Add Tweet</button>
                     </div>
                 </div>
             </div>

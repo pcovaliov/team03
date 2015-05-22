@@ -10,7 +10,7 @@ namespace Twitter.Services
     public interface IUserService
     {
         bool Register(UserModel CurrentUser);
-        int Login(UserModel UserToLogin);
+        UserModel Login(UserModel UserToLogin);
         List<UserModel> SelectUsers();
         UserModel GetUser(int idUser);
         bool EditUser(UserModel currentUser);

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Twitter.Convert;
 using Twitter.Models;
 using Twitter.DAL;
+using Twitter.Convert;
 using log4net;
 
 namespace Twitter.Services
@@ -33,7 +34,7 @@ namespace Twitter.Services
 
         }
 
-        public int Login(UserModel UserToLogin)
+        public UserModel Login(UserModel UserToLogin)
         {
             try
             {
@@ -45,11 +46,11 @@ namespace Twitter.Services
                               );
                 if (userList != null)
                 {
-                    return userList.id_user;
+                    return UserConvertor.ConvertToModel(userList);
                 }
                 else
                 {
-                    return 0;
+                    return null;
                 }
             }
             catch (Exception ex)
