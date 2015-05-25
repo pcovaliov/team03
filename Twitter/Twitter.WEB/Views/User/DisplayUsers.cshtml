@@ -22,6 +22,7 @@
                 <li><a href="@Url.Action("Register", "User")"><span>Register</span></a></li>
                 <li><a href="@Url.Action("Message", "Tweet")"><span>Tweets</span></a></li>
                 <li><a href="@Url.Action("DisplayUsers", "User")"><span>All Users</span></a></li>
+                <li><a href="@Url.Action("NewsTweet", "Tweet")"><span>News</span></a></li>
                 <li class='last'><a href="@Url.Action("SignOut", "User")"><span>Sign Out</span></a></li>
                 <li>Hello, @Session["LogedName"].ToString()</li>
                 <li> <img src="~/Content/images/@Session["Avatar"].ToString()" width="50px" height="50px"> </li>
@@ -31,9 +32,9 @@
 
         <br>
         <br>
-
         <div align="center">
             <table class="table">
+    
                 <tr>
                     <th>First Name
                     </th>
@@ -74,8 +75,6 @@
                             }
                             else
                             {
-                                @Html.ActionLink("Edit | ", "Edit", new { item = item.IdUser }, new { onclick = "javascript:return false;" });
-                                @Html.ActionLink("Delete |", "Delete", new { item = item.IdUser }, new { onclick = "javascript:return false;" });
                                 @Html.ActionLink("Subscribe |", "FollowUser",new { item = item.IdUser });
                                 @Html.ActionLink("UnFollow", "UnFollowUser", new { item = item.IdUser });
                             }
@@ -92,4 +91,16 @@
             @Html.PagedListPager(Model, page => Url.Action("DisplayUsers", new { page }))
         </div>
     </div>
+                @if (ViewData["0"] == "Follow Successfully")
+                {
+                    <div style="border: solid 1px green; width:100px;">
+                        <h4>@ViewData["0"]</h4>
+                    </div>
+                } 
+        @if (ViewData["1"] == "You already follow this user")
+                {
+                    <div style="border: solid 5px red; width:100px;">
+                       <h4>@ViewData["1"]</h4>
+                    </div>
+                }
 </body>

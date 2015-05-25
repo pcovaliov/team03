@@ -15,5 +15,6 @@ namespace Twitter.Models
         public int IdUser { get; set; }
         public DateTime CreatedOn { get; set; }
         public int IdTweet { get; set; }
+        public string PostedBy{  get; set; }
     }
 }

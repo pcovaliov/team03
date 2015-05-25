@@ -167,12 +167,13 @@ namespace Twitter.WEB.Controllers
             if (FollowService.Subscribe(item,idUser))
             {
                 log.Info("Subscribe succesfuly, id=" + item);
-                return RedirectToAction("DisplayUsers", "User");
+                ViewData["0"] = "Follow Successfully";
             }
             else
-            {
-                return View();
+            {        
+                ViewData["1"] = "You already follow this user";
             }
+            return RedirectToAction("DisplayUsers", "User");
 
         }
 
@@ -186,7 +187,7 @@ namespace Twitter.WEB.Controllers
             }
             else
             {
-                return View();
+                return RedirectToAction("DisplayUsers", "User");
             }
         }
 

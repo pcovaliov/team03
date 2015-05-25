@@ -25,6 +25,7 @@
                 <li><a href="@Url.Action("Register", "User")"><span>Register</span></a></li>
                 <li><a href="@Url.Action("Message", "Tweet")"><span>Tweets</span></a></li>
                 <li><a href="@Url.Action("DisplayUsers", "User")"><span>All Users</span></a></li>
+                <li><a href="@Url.Action("NewsTweet", "Tweet")"><span>News</span></a></li>
                 <li class='last'><a href="@Url.Action("SignOut", "User")"><span>Sign Out</span></a></li>
                 <li>Hello, @Session["LogedName"].ToString()</li>
                 <li> <img src="~/Content/images/@Session["Avatar"].ToString()" width="50px" height="50px"> </li>
@@ -40,8 +41,10 @@
                 <tr>
                     <th>Description
                     </th>
-                    <th>PosstedOn
-                    </th>              
+                    <th>Possted On
+                    </th>  
+                    <th>Possted By
+                    </th>             
                 </tr>
 
                 @foreach (var item in Model)
@@ -52,6 +55,9 @@
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.CreatedOn)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PostedBy)
                         </td>
                     </tr>
                 }

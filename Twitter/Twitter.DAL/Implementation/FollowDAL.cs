@@ -20,7 +20,10 @@ namespace Twitter.DAL.Implementation
 
         public bool AddFollow(Follow newFollow)
         {
-            if (newFollow != null)
+            var followList = dbContext.Follows.FirstOrDefault(
+                currentFollow => currentFollow.id_followed_user == newFollow.id_followed_user
+                && currentFollow.id_subscriber == newFollow.id_subscriber);            
+            if (newFollow != null && followList == null)
             {
                 dbContext.Follows.Add(newFollow);
                 dbContext.SaveChanges();
@@ -35,7 +38,9 @@ namespace Twitter.DAL.Implementation
         public bool DeleteFollow(int idSubscriber, int idFollowedUser)
         {
             var followToDelete =
-                dbContext.Follows.FirstOrDefault(currentFollow => currentFollow.id_subscriber.Equals(idSubscriber) && currentFollow.id_followed_user.Equals(idFollowedUser));
+                dbContext.Follows.FirstOrDefault(
+                currentFollow => currentFollow.id_subscriber.Equals(idSubscriber) 
+                && currentFollow.id_followed_user.Equals(idFollowedUser));
 
             if (followToDelete != null)
             {

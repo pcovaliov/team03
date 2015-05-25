@@ -122,7 +122,7 @@ namespace Twitter.WEB.Controllers
                     {
                         foreach (var currentTweet in TweetService.SelectTweets(currentFollow.idFollowedUser)) 
                         {
-                            currentTweet.Descripton += " : Posted By : " + currentUser.Email;
+                            currentTweet.PostedBy = currentUser.Email;
                             tweetPage.Add(currentTweet);
                         }
                     }
