@@ -226,6 +226,7 @@
     <Content Include="Content\Validation.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Properties\PublishProfiles\Roman.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -263,6 +264,7 @@
     <Content Include="Views\Tweet\Message.cshtml" />
     <Content Include="Views\Tweet\_DisplayTweets.cshtml" />
     <Content Include="Views\Tweet\Edit.cshtml" />
+    <Content Include="Views\Tweet\NewsTweet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,11 +10,11 @@ namespace Twitter.Convert
 {
     public class FollowConvertor
     {
-        public static Follow ConvertToDAL(FollowModel followToConvert)
+        public static Follow ConvertToDAL(int Subscriber, int FollowedUser)
         {
             Follow newFollow = new Follow();
-            newFollow.id_followed_user = followToConvert.idFollowedUser;
-            newFollow.id_subscriber = followToConvert.idSubscriber;
+            newFollow.id_followed_user = Subscriber;
+            newFollow.id_subscriber = FollowedUser;
 
             return newFollow;
         }

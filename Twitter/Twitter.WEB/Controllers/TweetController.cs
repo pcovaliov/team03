@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Twitter.Services;
+using Twitter.Services.Interfaces;
 using Twitter.Models;
 using PagedList;
 using PagedList.Mvc;
@@ -17,6 +18,8 @@ namespace Twitter.WEB.Controllers
     {
         #region Private
         public ITweetService TweetService { get; set; }
+        public IFollowService FollowService { get; set; }
+        public IUserService UserService { get; set; }
         #endregion
 
         private static log4net.ILog Log { get; set; }
@@ -98,6 +101,36 @@ namespace Twitter.WEB.Controllers
             {
                 return View(currentTweet);
             }
-        }     
+        }
+
+        [Authorize]
+        public ActionResult NewsTweet(int? page = 1)
+        {
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            int idLoggedUser = int.Parse(Session["LogedId"].ToString());
+            var followList = FollowService.GetSubscribers(idLoggedUser);
+            List<TweetModel> tweetPage = new List<TweetModel>();
+            var userList = UserService.SelectUsers();
+   
+
+            foreach (var currentFollow in followList) 
+            {
+                foreach (var currentUser in userList) 
+                {
+                    if (currentFollow.idFollowedUser == currentUser.IdUser) 
+                    {
+                        foreach (var currentTweet in TweetService.SelectTweets(currentFollow.idFollowedUser)) 
+                        {
+                            currentTweet.Descripton += " : Posted By : " + currentUser.Email;
+                            tweetPage.Add(currentTweet);
+                        }
+                    }
+                } 
+            }
+            tweetPage.OrderByDescending(currentTweet => currentTweet.CreatedOn).ToList();
+            log.Info("Displayed users succesfuly");
+            return View("NewsTweet", tweetPage.ToPagedList(pageNumber, pageSize));
+        }
     }
 }

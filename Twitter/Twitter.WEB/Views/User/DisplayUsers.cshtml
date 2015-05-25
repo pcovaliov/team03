@@ -67,13 +67,17 @@
                         <td id="TableRow">
                             @if (Session["AreAdmin"].ToString() == "Yes")
                             {
-                                @Html.ActionLink("Edit | ", "Edit", new { item = item.IdUser });                       
-                                @Html.ActionLink("Delete", "Delete", new { item = item.IdUser });
+                                @Html.ActionLink("Edit | ", "Edit", new { item = item.IdUser });                      
+                                @Html.ActionLink("Delete |", "Delete", new { item = item.IdUser });
+                                @Html.ActionLink("Subscribe |", "FollowUser",new { item = item.IdUser });
+                                @Html.ActionLink("UnFollow", "UnFollowUser", new { item = item.IdUser });
                             }
                             else
                             {
                                 @Html.ActionLink("Edit | ", "Edit", new { item = item.IdUser }, new { onclick = "javascript:return false;" });
-                                @Html.ActionLink("Delete", "Delete", new { item = item.IdUser }, new { onclick = "javascript:return false;" });
+                                @Html.ActionLink("Delete |", "Delete", new { item = item.IdUser }, new { onclick = "javascript:return false;" });
+                                @Html.ActionLink("Subscribe |", "FollowUser",new { item = item.IdUser });
+                                @Html.ActionLink("UnFollow", "UnFollowUser", new { item = item.IdUser });
                             }
 
 

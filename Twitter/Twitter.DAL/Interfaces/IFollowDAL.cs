@@ -10,6 +10,6 @@ namespace Twitter.DAL.Interfaces
     {
         bool AddFollow(Follow newFollow);
         bool DeleteFollow(int idSubscriber, int idFollowedUser);
-        List<Follow> ReadFollows();
+        List<Follow> ReadFollows(int idUser);
     }
 }

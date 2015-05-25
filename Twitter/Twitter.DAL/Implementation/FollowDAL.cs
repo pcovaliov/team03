@@ -49,12 +49,13 @@ namespace Twitter.DAL.Implementation
             }
         }
 
-        public List<Follow> ReadFollows() 
+        public List<Follow> ReadFollows(int idUser) 
         {
             var followList = new List<Follow>();
 
             foreach (var currentFollow in dbContext.Follows)
             {
+                if(currentFollow.id_subscriber == idUser)
                 followList.Add(currentFollow);
             }
 

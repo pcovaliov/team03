@@ -9,8 +9,8 @@ namespace Twitter.Services.Interfaces
 {
     public interface IFollowService
     {
-        bool Subscribe(FollowModel subscribedUser);
+        bool Subscribe(int Subscriber, int FollowedUser);
         bool UnSubscribe(int Subscriber, int FollowedUser);
-        List<FollowModel> GetSubscribers();
+        List<FollowModel> GetSubscribers(int idUser);
     }
 }

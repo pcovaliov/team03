@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Twitter.Services;
+using Twitter.Services.Interfaces;
 using Twitter.Models;
 using PagedList;
 using PagedList.Mvc;
@@ -20,6 +21,7 @@ namespace Twitter.WEB.Controllers
         ILog log = log4net.LogManager.GetLogger(typeof(UserController));
         #region Private
         public IUserService UserService { get; set; }
+        public IFollowService FollowService { get; set; }
         #endregion
 
         [AllowAnonymous]
@@ -156,6 +158,36 @@ namespace Twitter.WEB.Controllers
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Login");
+        }
+
+        [Authorize]
+        public ActionResult FollowUser(int item)
+        {
+            int idUser = int.Parse(Session["LogedId"].ToString());
+            if (FollowService.Subscribe(item,idUser))
+            {
+                log.Info("Subscribe succesfuly, id=" + item);
+                return RedirectToAction("DisplayUsers", "User");
+            }
+            else
+            {
+                return View();
+            }
+
+        }
+
+        public ActionResult UnFollowUser(int item) 
+        {
+            int idUser = int.Parse(Session["LogedId"].ToString());
+            if (FollowService.UnSubscribe(idUser,item))
+            {
+                log.Info("UnFollow succesfuly, id=" + item);
+                return RedirectToAction("DisplayUsers", "User");
+            }
+            else
+            {
+                return View();
+            }
         }
 
     }

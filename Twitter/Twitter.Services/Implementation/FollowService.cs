@@ -16,9 +16,9 @@ namespace Twitter.Services.Implementation
         public IFollowDAL FollowDal { get; set; }
         #endregion
 
-        public bool Subscribe(FollowModel subscribedUser)
+        public bool Subscribe(int Subscriber, int FollowedUser)
         {
-            return FollowDal.AddFollow(FollowConvertor.ConvertToDAL(subscribedUser));
+            return FollowDal.AddFollow(FollowConvertor.ConvertToDAL(Subscriber,FollowedUser));
         }
 
         public bool UnSubscribe(int Subscriber, int FollowedUser)
@@ -26,12 +26,12 @@ namespace Twitter.Services.Implementation
             return FollowDal.DeleteFollow(Subscriber, FollowedUser);
         }
 
-        public List<FollowModel> GetSubscribers() 
+        public List<FollowModel> GetSubscribers(int idUser)
         {
             var allSubscribers = new List<FollowModel>();
-            foreach (var currentFollow in FollowDal.ReadFollows())
+            foreach (var currentFollow in FollowDal.ReadFollows(idUser))
             {
-                    allSubscribers.Add(FollowConvertor.ConvertToModel(currentFollow));
+                allSubscribers.Add(FollowConvertor.ConvertToModel(currentFollow));
             }
             return allSubscribers;
         }
